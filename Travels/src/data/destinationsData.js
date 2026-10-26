@@ -1,0 +1,80 @@
+export const DESTINATIONS = [
+  {
+    id: 'everest',
+    slug: 'everest-region',
+    name: 'Everest Region',
+    title: 'Khumbu Valley & Mount Everest',
+    tag: 'Highest Peaks on Earth',
+    elevation: '8,848 m',
+    tripsCount: 12,
+    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1000&q=80',
+    description: 'Home to the world’s crown peak, Sagarmatha, legendary Sherpa communities, high suspension bridges, and turquoise glacial lakes.',
+    popularTreks: ['Everest Base Camp (14 Days)', 'Gokyo Lakes Trek (12 Days)', 'Three Passes Odyssey (20 Days)'],
+    highlights: ['Namche Bazaar', 'Tengboche Monastery', 'Kala Patthar', 'Gokyo Ri']
+  },
+  {
+    id: 'annapurna',
+    slug: 'annapurna-region',
+    name: 'Annapurna Region',
+    title: 'Diverse Valleys & Holy Passes',
+    tag: 'World-Renowned Diversity',
+    elevation: '8,091 m',
+    tripsCount: 15,
+    image: 'https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?auto=format&fit=crop&w=1000&q=80',
+    description: 'A mesmerizing transition from lush subtropical rhododendron forests to windswept Tibetan plateaus, crowned by Thorong La Pass.',
+    popularTreks: ['Annapurna Circuit (12 Days)', 'Annapurna Base Camp (9 Days)', 'Mardi Himal (10 Days)'],
+    highlights: ['Thorong La Pass (5,416m)', 'Poon Hill Sunrise', 'Muktinath Temple', 'Fishtail Mountain']
+  },
+  {
+    id: 'manaslu',
+    slug: 'manaslu-region',
+    name: 'Manaslu Region',
+    title: 'Mountain of the Spirit',
+    tag: 'Pristine Restricted Trail',
+    elevation: '8,163 m',
+    tripsCount: 6,
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80',
+    description: 'Nepal’s premier untouched wilderness trail circumnavigating Mt. Manaslu with preserved Tibetan border cultures and Larkya La pass.',
+    popularTreks: ['Manaslu Circuit (14 Days)', 'Tsum Valley Sacred Trek (15 Days)'],
+    highlights: ['Larkya La Pass (5,106m)', 'Birendra Tal', 'Samagaon Gompas', 'Ancient Tibetan Villages']
+  },
+  {
+    id: 'langtang',
+    slug: 'langtang-region',
+    name: 'Langtang Region',
+    title: 'Valley of Glaciers',
+    tag: 'Closest Alpine Trek to Capital',
+    elevation: '7,234 m',
+    tripsCount: 7,
+    image: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1000&q=80',
+    description: 'Towering granite massifs, Tamang culture, yak pastures, and high-altitude sacred alpine lakes of Gosainkunda.',
+    popularTreks: ['Langtang Valley (10 Days)', 'Langtang & Gosainkunda (15 Days)', 'Helambu Trek (5 Days)'],
+    highlights: ['Kyanjin Gompa', 'Tsergo Ri Summit (4,984m)', 'Fresh Yak Cheese', 'Gosainkunda Holy Lakes']
+  },
+  {
+    id: 'mustang',
+    slug: 'mustang-region',
+    name: 'Upper Mustang',
+    title: 'The Last Forbidden Kingdom',
+    tag: 'Ancient Tibetan Enclave',
+    elevation: '3,840 m',
+    tripsCount: 4,
+    image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1000&q=80',
+    description: 'Arid wind-carved red clay canyons, cliff sky-caves, walled capital Lo Manthang, and unbroken ancient Tibetan customs.',
+    popularTreks: ['Upper Mustang Jeep Tour (10 Days)', 'Lo Manthang Trek (14 Days)'],
+    highlights: ['Walled City Lo Manthang', 'Centuries-old Cave Temples', 'Tiji Festival', 'Kali Gandaki Canyon']
+  },
+  {
+    id: 'dolpo',
+    slug: 'dolpo-region',
+    name: 'Dolpo Region',
+    title: 'Mystical Land of Bon-Po',
+    tag: 'Remote High Altitude Plateau',
+    elevation: '5,115 m',
+    tripsCount: 3,
+    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80',
+    description: 'The real-life setting of Peter Matthiessen’s The Snow Leopard. Turquoise Shey Phoksundo Lake and isolated caravan routes.',
+    popularTreks: ['Lower Dolpo Circuit (18 Days)', 'Upper Dolpo Trek (24 Days)'],
+    highlights: ['Shey Phoksundo Deep Blue Lake', 'Ancient Bon Monasteries', 'Crystal Mountain', 'Yak Caravans']
+  }
+];
