@@ -28,8 +28,26 @@ export const translations = {
       aboutUs: "About Swagat Holidays",
       whyUs: "Why Travel with Us?",
       reviews: "Traveler Reviews",
-      tailoredTrekPrompt: "Want a tailored private trek? Certified Sherpa guides.",
+      tailoredTrekPrompt: "Want a tailored private trek?",
       customize: "Customize",
+      
+      // Missing keys added below
+      itineraries: "Itineraries",
+      exploreRegion: "Explore Region Page",
+      guaranteed: "100% Guaranteed",
+      certifiedSherpas: "Certified Sherpa guides.",
+      allToursDesc: "Complete sightseeing & culture",
+      chitwanSafariDesc: "Rhinos, elephants & Bengal tigers",
+      heliToursDesc: "VIP aerial landings at EBC",
+      activitiesDesc: "Rafting, paragliding & climbing",
+      visaInfo: "Nepal Visa on Arrival & eVisa",
+      bestTime: "Best Time to Trek in Nepal",
+      permits: "Nepal Trekking Permits Guide",
+      altitude: "Altitude Sickness & Health Protocols",
+      packing: "Trekking Packing Checklist",
+      cost: "How Much Does Trekking Cost?",
+      destinationsShowcase: "Destinations Showcase",
+      contactGuides: "Contact Our Guides"
     },
 
     // Hero Section
@@ -50,6 +68,7 @@ export const translations = {
       days6_10: "6 - 10 Days",
       days11_15: "11 - 15 Days",
       days16Plus: "16+ Days",
+      scrollToExplore: "Scroll to Explore", 
     },
 
     // Stats
@@ -78,6 +97,30 @@ export const translations = {
       askWhatsApp: "Ask via WhatsApp",
     },
 
+    // Interactive Map Section
+    map: {
+      title1: "Your Destination",
+      title2: "in Nepal",
+      subtitle: "Hover or click along Nepal’s geographic regions to preview mountain peaks, glacial valleys, and safari corridors with verified routes.",
+      filters: {
+        all: "All Hotspots (12)",
+        himalayas: "8,000m+ Himalayan Giants",
+        remote: "Restricted & Remote Kingdoms",
+        wildlife: "Lakes & Wildlife Safari",
+        heritage: "Cultural Heritage"
+      },
+      mapHelp: "Click or hover markers to inspect details",
+      legendHigh: "High Himalayas",
+      legendValleys: "Valleys & Terai",
+      best: "Best:",
+      verified: "Verified Route",
+      featuredRoutes: "Featured Routes in This Area:",
+      guaranteed: "Guaranteed",
+      explore: "Explore",
+      exploreBtnBottom: "Full itineraries, elevation profiles & guaranteed departure dates",
+      hotspotsLabel: "Hotspots:"
+    },
+
     // Common labels
     common: {
       days: "Days",
@@ -88,6 +131,14 @@ export const translations = {
       save: "Save",
       cancel: "Cancel",
       language: "Language",
+      saveAmount: "Save ${{amount}}",
+      perPerson: "/ person",
+      explore: "Explore",
+      inquire: "Inquire",
+      
+      // Missing keys added below
+      noTripsMatch: "No trips match your current filter selection.",
+      resetFilters: "Reset Filters"
     },
 
     // Footer
@@ -98,6 +149,64 @@ export const translations = {
       contactUs: "Contact Our Office",
       copyright: "All rights reserved. Swagat Holidays & Travels Pvt. Ltd.",
     },
+
+    // ADMIN PANEL TRANSLATIONS
+    admin: {
+      siteContent: {
+        messages: {
+          saveSuccess: "Changes saved successfully!",
+          saveError: "Failed to update section content."
+        },
+        langMode: {
+          title: "Content Language Mode",
+          description: "Switch tabs to manage English or Nepali dynamic content.",
+          enTab: "🇬🇧 English Content",
+          npTab: "🇳🇵 नेपाली (Nepali) Content"
+        },
+        hero: {
+          title: "Homepage Hero Section",
+          subtitle: "Headline, subtext, trust badge & main background",
+          saveBtn: "Save Hero Changes",
+          badgeLabel: "Top Trust Badge Text (English)",
+          badgePlaceholder: "e.g. Government Licensed • Sherpa Led • 100% Guaranteed Departures",
+          badgeLabelNp: "Top Trust Badge Text (नेपालीमा)",
+          badgePlaceholderNp: "उदाहरण: नेपाल सरकारबाट मान्यता प्राप्त • शेर्पा नेतृत्व",
+          titleLabel: "Hero Main Heading (English)",
+          titlePlaceholder: "e.g. Your Gateway to the Himalayas",
+          titleLabelNp: "Hero Main Heading (नेपालीमा मुख्य शीर्षक)",
+          titlePlaceholderNp: "उदाहरण: हिमालयको प्रवेशद्वारमा स्वागत छ",
+          subtitleLabel: "Hero Tagline / Subtitle (English)",
+          subtitleLabelNp: "Hero Tagline / Subtitle (नेपालीमा उप-शीर्षक)",
+          imageLabel: "Hero Background Wallpaper (Cloudinary / URL)"
+        },
+        stats: {
+          title: "Animated Stats Counter",
+          subtitle: "Key performance metrics shown beneath the hero",
+          saveBtn: "Save Stats",
+          expLabel: "Years of Experience (English)",
+          expLabelNp: "Years of Experience (नेपालीमा)",
+          successLabel: "Summit Success Rate (English)",
+          successLabelNp: "Summit Success Rate (नेपालीमा)",
+          trekkersLabel: "Trekkers Guided Safely (English)",
+          trekkersLabelNp: "Trekkers Guided Safely (नेपालीमा)",
+          ratingLabel: "Average Client Rating (English)",
+          ratingLabelNp: "Average Client Rating (नेपालीमा)"
+        },
+        contact: {
+          title: "Company Contact & Location",
+          subtitle: "Phone numbers, email addresses and office coordinates",
+          saveBtn: "Save Contact Info",
+          landlineLabel: "Office Landline",
+          whatsappLabel: "WhatsApp / 24/7 Mobile",
+          emailLabel: "Primary Email",
+          addressLabel: "Physical Address",
+          hoursLabel: "Office Working Hours",
+          emergencyLabel: "Emergency Support Text",
+          mapLabel: "Google Maps Embed URL (iframe src)",
+          mapHelp: "Paste the src URL from Google Maps > Share > Embed a map."
+        }
+      }
+    }
   },
 
   np: {
@@ -127,8 +236,26 @@ export const translations = {
       aboutUs: "स्वागत होलिडेजको बारेमा",
       whyUs: "हामीलाई किन रोज्ने?",
       reviews: "यात्रु समीक्षा",
-      tailoredTrekPrompt: "व्यक्तिगत निजी पदयात्रा चाहनुहुन्छ? प्रमाणित शेर्पा गाइडहरू उपलब्ध छन्।",
+      tailoredTrekPrompt: "व्यक्तिगत निजी पदयात्रा चाहनुहुन्छ?",
       customize: "अनुकूलित गर्नुहोस्",
+
+      // Missing keys added below
+      itineraries: "यात्रा कार्यक्रमहरू",
+      exploreRegion: "क्षेत्र पृष्ठ हेर्नुहोस्",
+      guaranteed: "१००% सुनिश्चित",
+      certifiedSherpas: "प्रमाणित शेर्पा गाइडहरू।",
+      allToursDesc: "पूर्ण दर्शनीय र संस्कृति",
+      chitwanSafariDesc: "गैंडा, हात्ती र बाघहरू",
+      heliToursDesc: "EBC मा VIP हवाई अवतरण",
+      activitiesDesc: "राफ्टिङ, प्याराग्लाइडिङ र आरोहण",
+      visaInfo: "नेपाल आगमनमा भिसा र eVisa",
+      bestTime: "नेपालमा ट्रेकिङको उत्तम समय",
+      permits: "नेपाल ट्रेकिङ अनुमति गाइड",
+      altitude: "उचाइ रोग र स्वास्थ्य प्रोटोकल",
+      packing: "ट्रेकिङ प्याकिङ चेकलिस्ट",
+      cost: "ट्रेकिङको लागत कति हुन्छ?",
+      destinationsShowcase: "गन्तव्य प्रदर्शन",
+      contactGuides: "हाम्रा गाइडहरूलाई सम्पर्क गर्नुहोस्"
     },
 
     // Hero Section
@@ -149,6 +276,7 @@ export const translations = {
       days6_10: "६ - १० दिन",
       days11_15: "११ - १५ दिन",
       days16Plus: "१६+ दिन",
+      scrollToExplore: "अन्वेषण गर्न तल स्क्रोल गर्नुहोस्", 
     },
 
     // Stats
@@ -177,6 +305,30 @@ export const translations = {
       askWhatsApp: "ह्वाट्सएपमा सोध्नुहोस्",
     },
 
+    // Interactive Map Section
+    map: {
+      title1: "तपाईंको गन्तव्य",
+      title2: "नेपालमा",
+      subtitle: "प्रमाणित मार्गहरूसँगै हिमाली चुचुराहरू, हिमनदी उपत्यकाहरू, र सफारी कोरिडोरहरू हेर्नको लागि नेपालको भौगोलिक क्षेत्रहरूमा होभर वा क्लिक गर्नुहोस्।",
+      filters: {
+        all: "सबै प्रमुख स्थलहरू (१२)",
+        himalayas: "८,००० मिटरभन्दा माथिका हिमाली दानवहरू",
+        remote: "प्रतिबन्धित र दुर्गम राज्यहरू",
+        wildlife: "ताल र वन्यजन्तु सफारी",
+        heritage: "सांस्कृतिक सम्पदा"
+      },
+      mapHelp: "विवरण हेर्न मार्करहरूमा क्लिक वा होभर गर्नुहोस्",
+      legendHigh: "उच्च हिमालय",
+      legendValleys: "उपत्यका र तराई",
+      best: "उत्तम:",
+      verified: "प्रमाणित मार्ग",
+      featuredRoutes: "यस क्षेत्रका प्रमुख मार्गहरू:",
+      guaranteed: "सुनिश्चित",
+      explore: "अन्वेषण गर्नुहोस्",
+      exploreBtnBottom: "पूर्ण यात्रा कार्यक्रम, उचाइ प्रोफाइल र सुनिश्चित प्रस्थान मितिहरू",
+      hotspotsLabel: "प्रमुख स्थलहरू:"
+    },
+
     // Common labels
     common: {
       days: "दिन",
@@ -187,6 +339,14 @@ export const translations = {
       save: "सुरक्षित गर्नुहोस्",
       cancel: "रद्द गर्नुहोस्",
       language: "भाषा",
+      saveAmount: "${{amount}} बचत",
+      perPerson: "/ प्रतिव्यक्ति",
+      explore: "हेर्नुहोस्",
+      inquire: "सोधपुछ",
+
+      // Missing keys added below
+      noTripsMatch: "तपाईंको हालको फिल्टरसँग मिल्ने कुनै यात्रा भेटिएन।",
+      resetFilters: "फिल्टर रिसेट गर्नुहोस्"
     },
 
     // Footer
@@ -197,6 +357,64 @@ export const translations = {
       contactUs: "हाम्रो कार्यालय सम्पर्क",
       copyright: "सर्वाधिकार सुरक्षित। स्वागत होलिडेज एण्ड ट्राभल्स प्रा. लि.",
     },
+
+    // ADMIN PANEL TRANSLATIONS (Nepali)
+    admin: {
+      siteContent: {
+        messages: {
+          saveSuccess: "परिवर्तनहरू सफलतापूर्वक बचत भयो!",
+          saveError: "खण्ड सामग्री अपडेट गर्न असफल भयो।"
+        },
+        langMode: {
+          title: "सामग्री भाषा मोड",
+          description: "अंग्रेजी वा नेपाली डाइनामिक सामग्री प्रबन्ध गर्न ट्याबहरू स्विच गर्नुहोस्।",
+          enTab: "🇬🇧 अंग्रेजी सामग्री",
+          npTab: "🇳🇵 नेपाली सामग्री"
+        },
+        hero: {
+          title: "गृहपृष्ठ हिरो खण्ड",
+          subtitle: "शीर्षक, उप-पाठ, ट्रस्ट ब्याज र मुख्य पृष्ठभूमि",
+          saveBtn: "हिरो परिवर्तनहरू बचत गर्नुहोस्",
+          badgeLabel: "शीर्ष ट्रस्ट ब्याज पाठ (अंग्रेजी)",
+          badgePlaceholder: "e.g. Government Licensed • Sherpa Led • 100% Guaranteed Departures",
+          badgeLabelNp: "शीर्ष ट्रस्ट ब्याज पाठ (नेपालीमा)",
+          badgePlaceholderNp: "उदाहरण: नेपाल सरकारबाट मान्यता प्राप्त • शेर्पा नेतृत्व",
+          titleLabel: "हिरो मुख्य शीर्षक (अंग्रेजी)",
+          titlePlaceholder: "e.g. Your Gateway to the Himalayas",
+          titleLabelNp: "हिरो मुख्य शीर्षक (नेपालीमा मुख्य शीर्षक)",
+          titlePlaceholderNp: "उदाहरण: हिमालयको प्रवेशद्वारमा स्वागत छ",
+          subtitleLabel: "हिरो ट्यागलाइन / उप-शीर्षक (अंग्रेजी)",
+          subtitleLabelNp: "हिरो ट्यागलाइन / उप-शीर्षक (नेपालीमा उप-शीर्षक)",
+          imageLabel: "हिरो पृष्ठभूमि वालपेपर (क्लाउडिनरी / URL)"
+        },
+        stats: {
+          title: "एनिमेटेड तथ्याङ्क काउन्टर",
+          subtitle: "हिरो मुनि देखाइएका मुख्य प्रदर्शन मेट्रिक्सहरू",
+          saveBtn: "तथ्याङ्कहरू बचत गर्नुहोस्",
+          expLabel: "अनुभवको वर्ष (अंग्रेजी)",
+          expLabelNp: "अनुभवको वर्ष (नेपालीमा)",
+          successLabel: "शिखर सफलता दर (अंग्रेजी)",
+          successLabelNp: "शिखर सफलता दर (नेपालीमा)",
+          trekkersLabel: "सुरक्षित रूपमा निर्देशित ट्रेकर्स (अंग्रेजी)",
+          trekkersLabelNp: "सुरक्षित रूपमा निर्देशित ट्रेकर्स (नेपालीमा)",
+          ratingLabel: "औसत ग्राहक मूल्याङ्कन (अंग्रेजी)",
+          ratingLabelNp: "औसत ग्राहक मूल्याङ्कन (नेपालीमा)"
+        },
+        contact: {
+          title: "कम्पनी सम्पर्क र स्थान",
+          subtitle: "फोन नम्बर, इमेल ठेगाना र कार्यालय निर्देशांकहरू",
+          saveBtn: "सम्पर्क जानकारी बचत गर्नुहोस्",
+          landlineLabel: "कार्यालय ल्यान्डलाइन",
+          whatsappLabel: "व्हाट्सएप / २४/७ मोबाइल",
+          emailLabel: "प्राथमिक इमेल",
+          addressLabel: "भौतिक ठेगाना",
+          hoursLabel: "कार्यालय समय",
+          emergencyLabel: "आपतकालीन सहायता पाठ",
+          mapLabel: "गुगल नक्सा इम्बेड URL (iframe src)",
+          mapHelp: "गुगल नक्सा > साझा गर्नुहोस् > नक्सा इम्बेड गर्नुहोस् बाट src URL टाँस्नुहोस्।"
+        }
+      }
+    }
   },
 };
 
@@ -218,29 +436,42 @@ export function LanguageProvider({ children }) {
 
   /**
    * Helper function to safely fetch nested translation values
-   * e.g. t('nav.home') or t('hero.exploreTreks')
+   * and support variable interpolation (e.g., t('saveAmount', { amount: 50 }))
    */
-  const t = (keyPath, fallback = "") => {
+  const t = (keyPath, variables = {}) => {
     const keys = keyPath.split(".");
     let current = translations[language];
 
+    // 1. Find the string in the current language
     for (const k of keys) {
       if (current && current[k] !== undefined) {
         current = current[k];
       } else {
-        // Fallback to English if translation is missing in selected language
+        // Fallback to English if missing in current language
         let fallbackCurrent = translations["en"];
         for (const fbK of keys) {
           if (fallbackCurrent && fallbackCurrent[fbK] !== undefined) {
             fallbackCurrent = fallbackCurrent[fbK];
           } else {
-            return fallback || keyPath;
+            return keyPath; // Return the key itself if missing in English too
           }
         }
-        return fallbackCurrent || fallback || keyPath;
+        current = fallbackCurrent;
+        break;
       }
     }
 
+    // 2. If it's a string, replace the {{variables}} with actual values
+    if (typeof current === "string") {
+      let result = current;
+      Object.keys(variables).forEach((key) => {
+        // Replace all instances of {{key}} with the value
+        result = result.split(`{{${key}}}`).join(variables[key]);
+      });
+      return result;
+    }
+
+    // 3. If it's an array or object, just return it
     return current;
   };
 

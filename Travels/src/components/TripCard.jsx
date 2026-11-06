@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import {
   Star,
-  Clock,
   Mountain,
   Footprints,
   Heart,
   ArrowUpRight,
-  CheckCircle2,
 } from "lucide-react";
 
 export default function TripCard({
@@ -20,13 +18,16 @@ export default function TripCard({
   const [imageLoaded, setImageLoaded] = useState(false);
   const { isNepali, t } = useLanguage();
 
-  const title = isNepali && trip.title_np ? trip.title_np : trip.title;
-  const region = isNepali && trip.region_np ? trip.region_np : trip.region;
-  const duration = isNepali && trip.duration_np ? trip.duration_np : trip.duration;
-  const difficulty = isNepali && trip.difficulty_np ? trip.difficulty_np : trip.difficulty;
-  const maxAltitude = isNepali && trip.maxAltitude_np ? trip.maxAltitude_np : trip.maxAltitude;
-  const badge = isNepali && trip.badge_np ? trip.badge_np : trip.badge;
-  const overview = isNepali && trip.overview_np ? trip.overview_np : trip.overview;
+  // Dynamic Data Fallbacks
+  const title = isNepali ? (trip.title_np || trip.title) : trip.title;
+  const region = isNepali ? (trip.region_np || trip.region) : trip.region;
+  const duration = isNepali ? (trip.duration_np || trip.duration) : trip.duration;
+  const difficulty = isNepali ? (trip.difficulty_np || trip.difficulty) : trip.difficulty;
+  const maxAltitude = isNepali ? (trip.maxAltitude_np || trip.maxAltitude) : trip.maxAltitude;
+  const badge = isNepali ? (trip.badge_np || trip.badge) : trip.badge;
+  const overview = isNepali ? (trip.overview_np || trip.overview) : trip.overview;
+
+  const discountAmount = trip.regularPrice - trip.salePrice;
 
   return (
     <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-slate-200/80 hover:border-brand-gold/40 transition-all duration-300 flex flex-col h-full transform hover:-translate-y-1.5">
@@ -129,18 +130,18 @@ export default function TripCard({
                 ${trip.regularPrice}
               </span>
               <span className="text-[10px] sm:text-xs font-semibold text-emerald-600 bg-emerald-50 px-1 sm:px-1.5 py-0.5 rounded">
-                Save ${trip.regularPrice - trip.salePrice}
+                {t("common.saveAmount", { amount: discountAmount })}
               </span>
             </div>
             <div className="flex items-baseline gap-1">
               <span className="text-[10px] sm:text-xs text-slate-500 font-medium">
-                {isNepali ? "सुरुवात" : "From"}
+                {t("common.from")}
               </span>
               <span className="text-base sm:text-xl font-extrabold text-brand-blue">
                 ${trip.salePrice}
               </span>
               <span className="text-[9px] sm:text-[10px] text-slate-400">
-                {isNepali ? "/ प्रतिव्यक्ति" : "/ person"}
+                {t("common.perPerson")}
               </span>
             </div>
           </div>
@@ -150,14 +151,14 @@ export default function TripCard({
               onClick={() => onSelectTrip(trip.id)}
               className="bg-slate-100 hover:bg-brand-blue hover:text-white text-slate-700 text-[10px] sm:text-xs font-bold py-1.5 sm:py-2.5 px-2 sm:px-3 rounded-lg sm:rounded-xl transition-all duration-200 flex items-center gap-0.5 sm:gap-1 cursor-pointer"
             >
-              <span>{isNepali ? "हेर्नुहोस्" : "Explore"}</span>
+              <span>{t("common.explore")}</span>
               <ArrowUpRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
             </button>
             <button
               onClick={() => onBookTrip(trip)}
               className="bg-brand-gold hover:bg-brand-gold-dark text-white text-[10px] sm:text-xs font-bold py-1.5 sm:py-2.5 px-2.5 sm:px-3 rounded-lg sm:rounded-xl shadow-sm hover:shadow transition-all duration-200 cursor-pointer"
             >
-              {isNepali ? "सोधपुछ" : "Inquire"}
+              {t("common.inquire")}
             </button>
           </div>
         </div>

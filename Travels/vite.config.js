@@ -2,9 +2,14 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "vite";
 import cloudflareTunnel from "vite-plugin-cloudflare-tunnel";
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(), cloudflareTunnel()],
+  
+  // ADDED THIS LINE: Ensures assets load from the root directory on cPanel
+  base: '/', 
+
   server: {
     port: 5173,
     proxy: {

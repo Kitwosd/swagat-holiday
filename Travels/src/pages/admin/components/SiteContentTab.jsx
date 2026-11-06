@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { api } from "../../../services/api";
 import { useData } from "../../../context/DataContext";
+import { useLanguage } from "../../../context/LanguageContext"; // Ensure this is imported
 import ImageUploadInput from "./ImageUploadInput";
 import {
   Save,
@@ -14,7 +15,19 @@ import {
 
 export default function SiteContentTab() {
   const { siteContent, updateSiteContentLocally, reloadData } = useData();
-  const [activeLangTab, setActiveLangTab] = useState("en"); // "en" | "np"
+  const { t, language } = useLanguage(); // Get global language and t function
+  
+  // Default the editing tab based on current global language
+  const [activeLangTab, setActiveLangTab] = useState(language === "np" ? "np" : "en");
+
+  // Sync the editing tab if the global language is toggled from the navbar/footer
+  useEffect(() => {
+    if (language === "np" || language === "ne") {
+      setActiveLangTab("np");
+    } else {
+      setActiveLangTab("en");
+    }
+  }, [language]);
 
   // Hero state
   const [heroData, setHeroData] = useState({
@@ -84,10 +97,10 @@ export default function SiteContentTab() {
       updateSiteContentLocally(key, data);
       await reloadData();
 
-      setSuccessMsg(`Section "${key}" updated successfully! Changes are live.`);
+      setSuccessMsg(t("admin.siteContent.messages.saveSuccess"));
       setTimeout(() => setSuccessMsg(""), 4000);
     } catch (err) {
-      setErrorMsg(err.message || "Failed to update section content.");
+      setErrorMsg(err.message || t("admin.siteContent.messages.saveError"));
     } finally {
       setSavingKey(null);
     }
@@ -99,10 +112,10 @@ export default function SiteContentTab() {
       <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3">
         <div>
           <span className="text-xs font-bold text-slate-800 uppercase tracking-wider block">
-            Content Language Mode
+            {t("admin.siteContent.langMode.title")}
           </span>
           <p className="text-[11px] text-slate-500">
-            Switch tabs to manage English or नेपाली (Nepali) dynamic content.
+            {t("admin.siteContent.langMode.description")}
           </p>
         </div>
         <div className="flex bg-slate-100 p-1 rounded-xl gap-1">
@@ -115,7 +128,7 @@ export default function SiteContentTab() {
                 : "text-slate-600 hover:text-slate-900"
             }`}
           >
-            🇬🇧 English Content
+            {t("admin.siteContent.langMode.enTab")}
           </button>
           <button
             type="button"
@@ -126,7 +139,7 @@ export default function SiteContentTab() {
                 : "text-slate-600 hover:text-slate-900"
             }`}
           >
-            🇳🇵 नेपाली (Nepali) Content
+            {t("admin.siteContent.langMode.npTab")}
           </button>
         </div>
       </div>
@@ -142,29 +155,6 @@ export default function SiteContentTab() {
           {errorMsg}
         </div>
       )}
-      {/* Top Banner */}
-      {/* <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
-        <h2 className="text-xl font-bold text-slate-900">
-          Dynamic Website Content & Assets
-        </h2>
-        <p className="text-xs text-slate-500 mt-1 leading-relaxed">
-          Update homepage hero titles, background imagery, company statistics
-          and office contact details in real-time. Changes are stored in MySQL
-          and immediately reflect across the site.
-        </p>
-
-        {successMsg && (
-          <div className="mt-4 p-3 bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs rounded-xl flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span>{successMsg}</span>
-          </div>
-        )}
-        {errorMsg && (
-          <div className="mt-4 p-3 bg-red-50 border border-red-200 text-red-700 text-xs rounded-xl">
-            {errorMsg}
-          </div>
-        )}
-      </div> */}
 
       {/* 1. Hero Section Settings */}
       <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 space-y-5">
@@ -175,10 +165,10 @@ export default function SiteContentTab() {
             </div>
             <div>
               <h3 className="text-sm font-bold text-slate-900">
-                Homepage Hero Section
+                {t("admin.siteContent.hero.title")}
               </h3>
               <p className="text-[11px] text-slate-500">
-                Headline, subtext, trust badge & main background
+                {t("admin.siteContent.hero.subtitle")}
               </p>
             </div>
           </div>
@@ -193,7 +183,7 @@ export default function SiteContentTab() {
             ) : (
               <Save className="w-3.5 h-3.5" />
             )}
-            <span>Save Hero Changes</span>
+            <span>{t("admin.siteContent.hero.saveBtn")}</span>
           </button>
         </div>
 
@@ -202,7 +192,7 @@ export default function SiteContentTab() {
             <>
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Top Trust Badge Text (English)
+                  {t("admin.siteContent.hero.badgeLabel")}
                 </label>
                 <input
                   type="text"
@@ -211,13 +201,13 @@ export default function SiteContentTab() {
                     setHeroData({ ...heroData, badge: e.target.value })
                   }
                   className="w-full px-3 py-2 border border-slate-300 rounded-lg text-xs"
-                  placeholder="e.g. Government Licensed • Sherpa Led • 100% Guaranteed Departures"
+                  placeholder={t("admin.siteContent.hero.badgePlaceholder")}
                 />
               </div>
 
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Hero Main Heading (English)
+                  {t("admin.siteContent.hero.titleLabel")}
                 </label>
                 <input
                   type="text"
@@ -226,13 +216,13 @@ export default function SiteContentTab() {
                     setHeroData({ ...heroData, title: e.target.value })
                   }
                   className="w-full px-3 py-2 border border-slate-300 rounded-lg text-xs font-bold text-slate-900"
-                  placeholder="e.g. Your Gateway to the Himalayas"
+                  placeholder={t("admin.siteContent.hero.titlePlaceholder")}
                 />
               </div>
 
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Hero Tagline / Subtitle (English)
+                  {t("admin.siteContent.hero.subtitleLabel")}
                 </label>
                 <textarea
                   rows={2}
@@ -248,7 +238,7 @@ export default function SiteContentTab() {
             <>
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Top Trust Badge Text (नेपालीमा)
+                  {t("admin.siteContent.hero.badgeLabelNp")}
                 </label>
                 <input
                   type="text"
@@ -257,13 +247,13 @@ export default function SiteContentTab() {
                     setHeroData({ ...heroData, badge_np: e.target.value })
                   }
                   className="w-full px-3 py-2 border border-slate-300 rounded-lg text-xs"
-                  placeholder="उदाहरण: नेपाल सरकारबाट मान्यता प्राप्त • शेर्पा नेतृत्व"
+                  placeholder={t("admin.siteContent.hero.badgePlaceholderNp")}
                 />
               </div>
 
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Hero Main Heading (नेपालीमा मुख्य शीर्षक)
+                  {t("admin.siteContent.hero.titleLabelNp")}
                 </label>
                 <input
                   type="text"
@@ -272,13 +262,13 @@ export default function SiteContentTab() {
                     setHeroData({ ...heroData, title_np: e.target.value })
                   }
                   className="w-full px-3 py-2 border border-slate-300 rounded-lg text-xs font-bold text-slate-900"
-                  placeholder="उदाहरण: हिमालयको प्रवेशद्वारमा स्वागत छ"
+                  placeholder={t("admin.siteContent.hero.titlePlaceholderNp")}
                 />
               </div>
 
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Hero Tagline / Subtitle (नेपालीमा उप-शीर्षक)
+                  {t("admin.siteContent.hero.subtitleLabelNp")}
                 </label>
                 <textarea
                   rows={2}
@@ -294,7 +284,7 @@ export default function SiteContentTab() {
 
           {/* Hero Background Image with Cloudinary Upload */}
           <ImageUploadInput
-            label="Hero Background Wallpaper (Cloudinary / URL)"
+            label={t("admin.siteContent.hero.imageLabel")}
             value={heroData.image}
             onChange={(url) => setHeroData({ ...heroData, image: url })}
           />
@@ -310,10 +300,10 @@ export default function SiteContentTab() {
             </div>
             <div>
               <h3 className="text-sm font-bold text-slate-900">
-                Animated Stats Counter
+                {t("admin.siteContent.stats.title")}
               </h3>
               <p className="text-[11px] text-slate-500">
-                Key performance metrics shown beneath the hero
+                {t("admin.siteContent.stats.subtitle")}
               </p>
             </div>
           </div>
@@ -328,7 +318,7 @@ export default function SiteContentTab() {
             ) : (
               <Save className="w-3.5 h-3.5" />
             )}
-            <span>Save Stats</span>
+            <span>{t("admin.siteContent.stats.saveBtn")}</span>
           </button>
         </div>
 
@@ -337,7 +327,7 @@ export default function SiteContentTab() {
             <>
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Years of Experience (English)
+                  {t("admin.siteContent.stats.expLabel")}
                 </label>
                 <input
                   type="text"
@@ -352,7 +342,7 @@ export default function SiteContentTab() {
 
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Summit Success Rate (English)
+                  {t("admin.siteContent.stats.successLabel")}
                 </label>
                 <input
                   type="text"
@@ -367,7 +357,7 @@ export default function SiteContentTab() {
 
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Trekkers Guided Safely (English)
+                  {t("admin.siteContent.stats.trekkersLabel")}
                 </label>
                 <input
                   type="text"
@@ -382,7 +372,7 @@ export default function SiteContentTab() {
 
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Average Client Rating (English)
+                  {t("admin.siteContent.stats.ratingLabel")}
                 </label>
                 <input
                   type="text"
@@ -399,7 +389,7 @@ export default function SiteContentTab() {
             <>
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Years of Experience (नेपालीमा)
+                  {t("admin.siteContent.stats.expLabelNp")}
                 </label>
                 <input
                   type="text"
@@ -414,7 +404,7 @@ export default function SiteContentTab() {
 
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Summit Success Rate (नेपालीमा)
+                  {t("admin.siteContent.stats.successLabelNp")}
                 </label>
                 <input
                   type="text"
@@ -429,7 +419,7 @@ export default function SiteContentTab() {
 
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Trekkers Guided Safely (नेपालीमा)
+                  {t("admin.siteContent.stats.trekkersLabelNp")}
                 </label>
                 <input
                   type="text"
@@ -444,7 +434,7 @@ export default function SiteContentTab() {
 
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">
-                  Average Client Rating (नेपालीमा)
+                  {t("admin.siteContent.stats.ratingLabelNp")}
                 </label>
                 <input
                   type="text"
@@ -470,10 +460,10 @@ export default function SiteContentTab() {
             </div>
             <div>
               <h3 className="text-sm font-bold text-slate-900">
-                Company Contact & Location
+                {t("admin.siteContent.contact.title")}
               </h3>
               <p className="text-[11px] text-slate-500">
-                Phone numbers, email addresses and office coordinates
+                {t("admin.siteContent.contact.subtitle")}
               </p>
             </div>
           </div>
@@ -488,14 +478,14 @@ export default function SiteContentTab() {
             ) : (
               <Save className="w-3.5 h-3.5" />
             )}
-            <span>Save Contact Info</span>
+            <span>{t("admin.siteContent.contact.saveBtn")}</span>
           </button>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-xs font-bold text-slate-700 mb-1">
-              Office Landline
+              {t("admin.siteContent.contact.landlineLabel")}
             </label>
             <input
               type="text"
@@ -509,7 +499,7 @@ export default function SiteContentTab() {
 
           <div>
             <label className="block text-xs font-bold text-slate-700 mb-1">
-              WhatsApp / 24/7 Mobile
+              {t("admin.siteContent.contact.whatsappLabel")}
             </label>
             <input
               type="text"
@@ -523,7 +513,7 @@ export default function SiteContentTab() {
 
           <div>
             <label className="block text-xs font-bold text-slate-700 mb-1">
-              Primary Email
+              {t("admin.siteContent.contact.emailLabel")}
             </label>
             <input
               type="email"
@@ -537,7 +527,7 @@ export default function SiteContentTab() {
 
           <div>
             <label className="block text-xs font-bold text-slate-700 mb-1">
-              Physical Address {activeLangTab === "np" ? "(नेपालीमा)" : "(English)"}
+              {t("admin.siteContent.contact.addressLabel")} {activeLangTab === "np" ? "(नेपालीमा)" : "(English)"}
             </label>
             {activeLangTab === "en" ? (
               <input
@@ -563,7 +553,7 @@ export default function SiteContentTab() {
 
           <div>
             <label className="block text-xs font-bold text-slate-700 mb-1">
-              Office Working Hours {activeLangTab === "np" ? "(नेपालीमा)" : "(English)"}
+              {t("admin.siteContent.contact.hoursLabel")} {activeLangTab === "np" ? "(नेपालीमा)" : "(English)"}
             </label>
             {activeLangTab === "en" ? (
               <input
@@ -590,7 +580,7 @@ export default function SiteContentTab() {
 
           <div>
             <label className="block text-xs font-bold text-slate-700 mb-1">
-              Emergency Support Text {activeLangTab === "np" ? "(नेपालीमा)" : "(English)"}
+              {t("admin.siteContent.contact.emergencyLabel")} {activeLangTab === "np" ? "(नेपालीमा)" : "(English)"}
             </label>
             {activeLangTab === "en" ? (
               <input
@@ -623,7 +613,7 @@ export default function SiteContentTab() {
 
           <div className="sm:col-span-2">
             <label className="block text-xs font-bold text-slate-700 mb-1">
-              Google Maps Embed URL (iframe src)
+              {t("admin.siteContent.contact.mapLabel")}
             </label>
             <textarea
               rows={3}
@@ -635,11 +625,7 @@ export default function SiteContentTab() {
               className="w-full px-3 py-2 border border-slate-300 rounded-lg text-xs font-mono"
             />
             <p className="text-[11px] text-slate-500 mt-1">
-              Paste the{" "}
-              <code className="bg-slate-100 px-1 py-0.5 rounded text-slate-700">
-                src
-              </code>{" "}
-              URL from Google Maps &gt; Share &gt; Embed a map.
+              {t("admin.siteContent.contact.mapHelp")}
             </p>
 
             {contactData.googleMapUrl && (

@@ -7,7 +7,8 @@ import { useLanguage } from "../context/LanguageContext";
 
 export default function Footer({ onOpenPlanTrip, onSelectRegion }) {
   const { siteContent } = useData();
-  const { t, language, toggleLanguage } = useLanguage();
+  const { language, toggleLanguage } = useLanguage();
+  
   const contact = siteContent?.contact_info || {
     phone: "+977-1-4700000",
     mobile: "+977-9851000000",
@@ -27,18 +28,19 @@ export default function Footer({ onOpenPlanTrip, onSelectRegion }) {
     }
   };
 
+  // Restored Quick Links with hardcoded text
   const quickLinks = [
     { label: "About Us", to: "/about" },
-    { label: "Why Choose Us", to: "/about#why-us" },
-    { label: "Contact Us", to: "/contact" },
-    { label: "Travel Blogs", to: "/travel-info" },
-    { label: "Nepal Travels", to: "/treks" },
-    { label: "Nepal Tours", to: "/tours" },
+    { label: "Contact", to: "/contact" },
+    { label: "Blogs", to: "/travel-info" },
+    { label: "Treks", to: "/treks" },
+    { label: "Tours", to: "/tours" },
     { label: "Destinations", to: "/destinations" },
     { label: "Activities", to: "/activities" },
   ];
 
   const whatsappNumber = (contact.whatsapp || contact.mobile || "+9779851000000").replace(/[^0-9]/g, "");
+  
   const socialLinks = [
     { name: "Facebook", url: "https://facebook.com" },
     { name: "Instagram", url: "https://instagram.com" },
@@ -88,10 +90,12 @@ export default function Footer({ onOpenPlanTrip, onSelectRegion }) {
       className="bg-slate-900 text-slate-300 pt-12 sm:pt-16 lg:pt-20 pb-8 sm:pb-12 border-t border-slate-800"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Top Grid */}
+        
+        {/* Top Grid - 4 Columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 pb-10 sm:pb-14 border-b border-slate-800">
-          {/* Brand / Logo */}
-          <div className="md:col-span-2 lg:col-span-1 border-r-2 pr-10">
+          
+          {/* Brand / Logo & Description */}
+          <div className="md:col-span-2 lg:col-span-1 border-r-0 lg:border-r-2 pr-0 lg:pr-8 border-slate-800">
             <Link to="/" className="flex items-center gap-3 min-w-0">
               <div className="rounded-xl bg-white p-1.5 shadow border border-brand-gold/30 shrink-0">
                 <img
@@ -109,13 +113,16 @@ export default function Footer({ onOpenPlanTrip, onSelectRegion }) {
                   SWAGAT
                 </span>
                 <span className="text-[11px] sm:text-xs uppercase font-bold text-brand-gold tracking-widest block mt-1.5">
-                  Holidays &amp; Travels
+                  Holidays & Travels
                 </span>
                 <span className="text-xs font-semibold italic text-emerald-400 block mt-1">
-                  Every Journey begins with Swagat
+                  Journey Beyond Limits
                 </span>
               </div>
             </Link>
+            <p className="mt-5 text-sm text-slate-400 leading-relaxed max-w-sm">
+              Your trusted partner for unforgettable Himalayan treks, cultural tours, and bespoke travel experiences. Let us guide you to the top of the world.
+            </p>
           </div>
 
           {/* Quick Links */}
@@ -123,12 +130,12 @@ export default function Footer({ onOpenPlanTrip, onSelectRegion }) {
             <h4 className="text-sm sm:text-base font-bold text-white uppercase tracking-wider mb-4 sm:mb-5 border-l-2 border-brand-gold pl-3">
               Quick Links
             </h4>
-            <ul className="flex flex-col flex-wrap gap-x-6 gap-y-2.5 md:gap-y-3 text-sm sm:text-[15px] text-slate-400">
+            <ul className="flex flex-col gap-y-2.5 md:gap-y-3 text-sm sm:text-[15px] text-slate-400">
               {quickLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     to={link.to}
-                    className="hover:text-brand-gold hover:scale-103 transition block whitespace-nowrap"
+                    className="hover:text-brand-gold transition block whitespace-nowrap"
                   >
                     {link.label}
                   </Link>
@@ -136,12 +143,13 @@ export default function Footer({ onOpenPlanTrip, onSelectRegion }) {
               ))}
             </ul>
           </div>
+
           {/* Socials */}
           <div>
             <h4 className="text-sm sm:text-base font-bold text-white uppercase tracking-wider mb-4 sm:mb-5 border-l-2 border-emerald-500 pl-3">
               Follow Us
             </h4>
-            <ul className="flex flex-col flex-wrap gap-x-6 gap-y-2.5 md:gap-y-3 text-sm sm:text-[15px]">
+            <ul className="flex flex-col gap-y-2.5 md:gap-y-3 text-sm sm:text-[15px]">
               {socialLinks.map((social) => (
                 <li key={social.name}>
                   <a
@@ -157,18 +165,19 @@ export default function Footer({ onOpenPlanTrip, onSelectRegion }) {
               ))}
             </ul>
           </div>
-          {/* Contact Us */}
+
+          {/* Contact Us & Newsletter */}
           <div>
             <h4 className="text-sm sm:text-base font-bold text-white uppercase tracking-wider mb-4 sm:mb-5 border-l-2 border-blue-500 pl-3">
               Contact Us
             </h4>
-            <ul className="flex flex-row md:flex-col flex-wrap gap-x-6 gap-y-3 md:gap-y-3.5 text-sm sm:text-[15px] text-slate-400">
+            <ul className="flex flex-col gap-3.5 text-sm sm:text-[15px] text-slate-400">
               {contactItems.map((item, idx) => {
                 const Icon = item.icon;
                 return (
-                  <li key={idx} className="flex items-center gap-2.5">
+                  <li key={idx} className="flex items-start gap-2.5">
                     <Icon
-                      className={`w-4 h-4 sm:w-[18px] sm:h-[18px] shrink-0 ${item.iconColor}`}
+                      className={`w-4 h-4 sm:w-[18px] sm:h-[18px] shrink-0 mt-0.5 ${item.iconColor}`}
                     />
                     {item.content}
                   </li>
@@ -179,19 +188,19 @@ export default function Footer({ onOpenPlanTrip, onSelectRegion }) {
             {/* Newsletter */}
             <div className="mt-5 sm:mt-7 max-w-xs">
               <span className="text-xs sm:text-sm font-bold text-slate-300 block mb-2.5">
-                Himalayan Trail Updates &amp; Offers
+                Subscribe to our Newsletter
               </span>
               {subscribed ? (
                 <div className="bg-emerald-900/50 border border-emerald-600/50 text-emerald-300 p-3 rounded-lg text-xs sm:text-sm flex items-center gap-2">
                   <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Subscribed! Welcome to Swagat family.</span>
+                  <span>Subscribed successfully!</span>
                 </div>
               ) : (
                 <form onSubmit={handleSubscribe} className="flex">
                   <input
                     type="email"
                     required
-                    placeholder="Your email address"
+                    placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="bg-slate-800 border border-slate-700 rounded-l-lg px-3.5 py-2.5 text-xs sm:text-sm text-white placeholder-slate-500 focus:outline-none focus:border-brand-gold w-full min-w-0"
@@ -209,38 +218,18 @@ export default function Footer({ onOpenPlanTrip, onSelectRegion }) {
           </div>
         </div>
 
-        {/* Bottom Credits & Copyright */}
-        <div className="pt-6 sm:pt-8 flex flex-row md:flex-col items-center justify-between text-xs sm:text-sm text-slate-500 gap-3 sm:gap-4 text-center sm:text-left">
-          <div className="order-2 sm:order-1 flex items-center gap-3">
+        {/* Bottom Credits & Copyright (Removed footer.bottom links) */}
+        <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between text-xs sm:text-sm text-slate-500 gap-4">
+          <div className="flex flex-col sm:flex-row items-center gap-3">
             <span>
-              © {new Date().getFullYear()} Swagat Holidays &amp; Travels Pvt. Ltd. {t("footer.copyright")}
+              © {new Date().getFullYear()} Swagat Holidays &amp; Travels Pvt. Ltd. All rights reserved.
             </span>
             <button
               onClick={toggleLanguage}
-              className="px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer"
+              className="px-2 py-1 rounded text-[11px] font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer"
             >
               🌐 {language === "en" ? "नेपाली (Nepali)" : "English"}
             </button>
-          </div>
-          <div className="order-1 sm:order-2 flex flex-wrap items-center justify-center gap-3 sm:gap-5">
-            <Link to="/about" className="hover:text-slate-300 transition">
-              About Us
-            </Link>
-            <span className="text-slate-700">•</span>
-            <Link to="/contact" className="hover:text-slate-300 transition">
-              Contact
-            </Link>
-            <span className="text-slate-700">•</span>
-            <Link
-              to="/destinations"
-              className="hover:text-slate-300 transition"
-            >
-              Destinations
-            </Link>
-            <span className="text-slate-700">•</span>
-            <Link to="/activities" className="hover:text-slate-300 transition">
-              Activities
-            </Link>
           </div>
         </div>
       </div>

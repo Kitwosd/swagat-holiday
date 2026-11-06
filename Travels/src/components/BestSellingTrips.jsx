@@ -14,7 +14,9 @@ export default function BestSellingTrips({
   wishlist,
   onToggleWishlist,
 }) {
-  const { t } = useLanguage();
+  // ✅ 1. Add isNepali here
+  const { t, isNepali } = useLanguage(); 
+
   const filteredTrips = trips.filter((trip) => {
     if (activeFilter === "all") return true;
     if (activeFilter === "everest")
@@ -67,7 +69,8 @@ export default function BestSellingTrips({
                   : "bg-white text-slate-700 hover:bg-slate-100 border border-slate-200"
               }`}
             >
-              {cat.name}
+              {/* ✅ 2. Render Nepali name if active */}
+              {isNepali ? cat.name_np : cat.name}
             </button>
           ))}
         </ScrollReveal>
@@ -92,16 +95,19 @@ export default function BestSellingTrips({
           ))}
         </div>
 
+        {/* Empty State */}
         {filteredTrips.length === 0 && (
           <div className="text-center py-16 bg-white rounded-2xl border border-dashed border-slate-300 mt-8">
             <p className="text-slate-500 font-medium">
-              No trips match your current filter selection.
+              {/* ✅ 3. Translated empty state text */}
+              {t("common.noTripsMatch")}
             </p>
             <button
               onClick={() => setActiveFilter("all")}
-              className="mt-4 px-4 py-2 bg-brand-blue text-white text-xs font-bold rounded-lg"
+              className="mt-4 px-4 py-2 bg-brand-blue text-white text-xs font-bold rounded-lg cursor-pointer hover:bg-brand-blue-dark transition"
             >
-              Reset Filters
+              {/* ✅ 4. Translated reset button */}
+              {t("common.resetFilters")}
             </button>
           </div>
         )}

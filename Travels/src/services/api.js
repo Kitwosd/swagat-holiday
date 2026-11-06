@@ -1,9 +1,7 @@
 import { toast } from "react-toastify";
 
-const API_BASE_URL =
-  "http://localhost:5000/api" ||
-  import.meta.env.VITE_API_URL ||
-  "http://localhost:5000/api";
+// UPDATED: Fallback now points to your production backend subdomain
+const API_BASE_URL = import.meta.env.VITE_API_URL || "https://api.swagattravel.com/api";
 
 /**
  * Helper to make API requests with automatic JWT token attachment.

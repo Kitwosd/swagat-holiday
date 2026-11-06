@@ -1,17 +1,28 @@
-const { Sequelize } = require('sequelize');
-const dotenv = require('dotenv');
+const { Sequelize } = require("sequelize");
+const dotenv = require("dotenv");
 
 dotenv.config();
 
+// 🔍 DEBUGGING
+console.log("DB Config loaded from .env:");
+console.log("DB_USER:", process.env.DB_USER);
+console.log(
+  "DB_PASSWORD:",
+  process.env.DB_PASSWORD
+    ? "*** (Password is set)"
+    : "❌ (Password is EMPTY or undefined)",
+);
+console.log("DB_NAME:", process.env.DB_NAME);
+
 const sequelize = new Sequelize(
-  process.env.DB_NAME || 'Travels',
-  process.env.DB_USER || 'root',
-  process.env.DB_PASSWORD || '123',
+  "Travels", // Hardcoded DB Name
+  "root", // Hardcoded User
+  "root", // 🚨 CHANGED TO "root" (Your new password)
   {
-    host: process.env.DB_HOST || 'localhost',
-    port: process.env.DB_PORT || 3306,
-    dialect: 'mysql',
-    logging: process.env.NODE_ENV === 'development' ? console.log : false,
+    host: "localhost",
+    port: 3306,
+    dialect: "mysql",
+    logging: process.env.NODE_ENV === "development" ? console.log : false,
     pool: {
       max: 10,
       min: 0,
@@ -22,15 +33,15 @@ const sequelize = new Sequelize(
       timestamps: true,
       underscored: false,
     },
-  }
+  },
 );
 
 const connectDB = async () => {
   try {
     await sequelize.authenticate();
-    console.log('MySQL Database connected successfully via Sequelize.');
+    console.log("✅ MySQL Database connected successfully via Sequelize.");
   } catch (error) {
-    console.error('Unable to connect to MySQL database:', error.message);
+    console.error("❌ Unable to connect to MySQL database:", error.message);
     process.exit(1);
   }
 };

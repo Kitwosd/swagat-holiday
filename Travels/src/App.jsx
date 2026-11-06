@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ScrollProgressBar from "./components/ScrollProgressBar";
@@ -33,7 +32,12 @@ import TripDetailPage from "./pages/TripDetailPage";
 
 function AppContent() {
   const { trips: dataTrips, destinations } = useData();
-  const [trips, setTrips] = useState(dataTrips || TRIPS);
+  
+  // ✅ FIX 1: Safer initialization. If dataTrips is an empty array [], use TRIPS.
+  const [trips, setTrips] = useState(
+    dataTrips && dataTrips.length > 0 ? dataTrips : TRIPS
+  );
+  
   const [activeFilter, setActiveFilter] = useState("all");
   const [selectedTrip, setSelectedTrip] = useState(null);
   const [searchModalOpen, setSearchModalOpen] = useState(false);
@@ -42,10 +46,27 @@ function AppContent() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // Keep local trips in sync with DataContext trips
+  // ✅ FIX 2: Smart Merge. Keep backend data, but inject static _np fields if backend is missing them.
   useEffect(() => {
     if (dataTrips && dataTrips.length > 0) {
-      setTrips(dataTrips);
+      const mergedTrips = dataTrips.map((dbTrip) => {
+        const staticTrip = TRIPS.find((t) => t.id === dbTrip.id);
+        if (!staticTrip) return dbTrip;
+
+        return {
+          ...staticTrip,
+          ...dbTrip, // DB data takes priority
+          // Fallback to static Nepali translations if DB doesn't have them yet
+          title_np: dbTrip.title_np || staticTrip.title_np,
+          region_np: dbTrip.region_np || staticTrip.region_np,
+          duration_np: dbTrip.duration_np || staticTrip.duration_np,
+          overview_np: dbTrip.overview_np || staticTrip.overview_np,
+          badge_np: dbTrip.badge_np || staticTrip.badge_np,
+          maxAltitude_np: dbTrip.maxAltitude_np || staticTrip.maxAltitude_np,
+          difficulty_np: dbTrip.difficulty_np || staticTrip.difficulty_np,
+        };
+      });
+      setTrips(mergedTrips);
     }
   }, [dataTrips]);
 

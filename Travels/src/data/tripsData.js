@@ -3,14 +3,19 @@ export const TRIPS = [
     id: 'ebc-14',
     slug: 'everest-base-camp-trek-14-days',
     title: 'Everest Base Camp Trek 14-Days',
+    title_np: 'सगरमाथा आधार शिविर ट्रेक (१४ दिन)',
     region: 'Everest Region',
+    region_np: 'सोलुखुम्बु (एभरेष्ट) क्षेत्र',
     regionSlug: 'everest-region',
     category: 'trek',
     duration: '14 Days',
+    duration_np: '१४ दिन',
     durationDays: 14,
     maxAltitude: '5,364 m / 17,598 ft',
+    maxAltitude_np: '५,३६४ मि / १७,५९८ फिट',
     maxAltitudeNum: 5364,
     difficulty: 'Moderate to Strenuous',
+    difficulty_np: 'मध्यम देखि कठिन',
     difficultyLevel: 'strenuous',
     rating: 4.98,
     reviewsCount: 142,
@@ -18,6 +23,7 @@ export const TRIPS = [
     salePrice: 1290,
     featured: true,
     badge: 'Best Seller 2026',
+    badge_np: 'उत्कृष्ट बिक्री २०२६',
     image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80',
@@ -25,15 +31,26 @@ export const TRIPS = [
       'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80'
     ],
     overview: 'The quintessential Himalayan pilgrimage. Trek through iconic Sherpa villages, ancient Tengboche monastery, and stand directly beneath Mt. Everest at Base Camp with a sunrise summit of Kala Patthar (5,545m).',
+    overview_np: 'हिमालयको सबैभन्दा प्रसिद्ध तीर्थयात्रा। प्रतिष्ठित शेर्पा गाउँहरू, प्राचीन तेन्गबोचे मठ हुँदै सगरमाथाको फेदीमा पुग्ने र कालापत्थर (५,५४५ मि) मा सूर्योदय हेर्ने अविस्मरणीय यात्रा।',
     bestSeason: 'Mar – May & Sep – Dec',
+    bestSeason_np: 'मार्च – मे र सेप्टेम्बर – डिसेम्बर',
     groupSize: '2 – 12 Trekkers',
+    groupSize_np: '२ – १२ जना ट्रेकर्स',
     startEnd: 'Kathmandu to Kathmandu',
+    startEnd_np: 'काठमाडौं देखि काठमाडौं',
     highlights: [
       'Scenic mountain flight into Lukla (Tenzing-Hillary Airport)',
       'Acclimatization days in the bustling Sherpa capital of Namche Bazaar',
       'Spiritual blessings at Tengboche Monastery with views of Ama Dablam',
       'Stand at legendary Everest Base Camp (5,364m) alongside expedition teams',
       '360-degree sunrise panorama of Everest, Lhotse, and Nuptse from Kala Patthar (5,545m)'
+    ],
+    highlights_np: [
+      'लुक्ला (तेन्जिङ-हिलारी विमानस्थल) को लागि मनोरम हिमाली उडान',
+      'शेर्पाहरूको राजधानी नाम्चे बजारमा उचाइ अनुकूलन (Acclimatization) दिनहरू',
+      'अमा दब्लमको दृश्यसहित तेन्गबोचे मठमा आध्यात्मिक आशीर्वाद',
+      'अभियान टोलीहरूसँगै प्रसिद्ध एभरेष्ट बेस क्याम्प (५,३६४ मि) मा पुग्ने',
+      'कालापत्थर (५,५४५ मि) बाट सगरमाथा, ल्होत्से र नुप्त्सेको ३६०-डिग्री सूर्योदय दृश्य'
     ],
     itinerary: [
       { day: 1, title: 'Arrival in Kathmandu (1,400m)', desc: 'Welcome by Swagat team at Tribhuvan International Airport, hotel transfer and trek briefing.' },
@@ -51,6 +68,22 @@ export const TRIPS = [
       { day: 13, title: 'Fly Lukla to Kathmandu', desc: 'Return morning flight to Kathmandu, rest, and farewell Nepali dinner.' },
       { day: 14, title: 'Final Departure from Kathmandu', desc: 'Transfer to airport with heartfelt Swagat memories.' }
     ],
+    itinerary_np: [
+      { day: 1, title: 'काठमाडौं आगमन (१,४०० मि)', desc: 'त्रिभुवन अन्तर्राष्ट्रिय विमानस्थलमा स्वागत टोलीद्वारा स्वागत, होटल स्थानान्तरण र ट्रेकको जानकारी।' },
+      { day: 2, title: 'लुक्ला उडान (२,८४० मि) र फाक्दिङ ट्रेक (२,६१० मि)', desc: 'हिमालय माथिको रोमाञ्चक उडान र दूधकोशी नदीको किनारमा ३-४ घण्टाको सजिलो पैदल यात्रा।' },
+      { day: 3, title: 'फाक्दिङ देखि नाम्चे बजार (३,४४० मि)', desc: 'हिलारी झोलुङ्गे पुल पार गर्दै र चीर-सल्लाको जङ्गल हुँदै रमणीय शेर्पा गाउँ नाम्चे पुग्ने।' },
+      { day: 4, title: 'नाम्चे बजारमा उचाइ अनुकूलन दिन (३,४४० मि)', desc: 'सगरमाथाको पहिलो दृश्यका लागि एभरेष्ट भ्यु होटल (३,८८० मि) सम्म हाइकिङ र स्थानीय शेर्पा संग्रहालयको अवलोकन।' },
+      { day: 5, title: 'नाम्चे बजार देखि तेन्गबोचे (३,८६० मि)', desc: 'अमा दब्लम माथि उठेको मनोरम ढोकाहरू हुँदै पवित्र तेन्गबोचे मठमा पुग्ने।' },
+      { day: 6, title: 'तेन्गबोचे देखि डिङबोचे (४,४१० मि)', desc: 'लालीगुराँसको जङ्गल र मणि ढुङ्गाका पर्खालहरू पार गर्दै इम्जा उपत्यकाको अल्पाइन भूभागमा प्रवेश।' },
+      { day: 7, title: 'डिङबोचेमा उचाइ अनुकूलन दिन (४,४१० मि)', desc: 'मकालु र आइल्याण्ड पिकको दृश्यका लागि नाङ्कार्शाङ शिखर (५,०८३ मि) मा अनुकूलन आरोहण।' },
+      { day: 8, title: 'डिङबोचे देखि लोबुचे (४,९१० मि)', desc: 'थुक्ला पासमा रहेका आरोहीहरूको सम्झनामा बनेका स्मारकहरू पार गर्दै खुम्बु हिमनदीको मोरेन पछ्याउँदै।' },
+      { day: 9, title: 'लोबुचे देखि गोरकशेप (५,१४० मि) र एभरेष्ट बेस क्याम्प (५,३६४ मि)', desc: 'ऐतिहासिक कोसेढुङ्गा: EBC पुग्ने, हिउँमा उत्सव मनाउने र रातको लागि गोरकशेप फर्कने।' },
+      { day: 10, title: 'कालापत्थर (५,५४५ मि) सूर्योदय हाइक र फेरिचे (४,२४० मि) तर्फ अवतरण', desc: 'सगरमाथाको सबैभन्दा नजिक र लोभलाग्दो सूर्योदय दृश्यका लागि बिहान सबेरै आरोहण।' },
+      { day: 11, title: 'फेरिचे देखि नाम्चे बजार (३,४४० मि) फिर्ता', desc: 'पाङबोचे र तेन्गबोचे हुँदै अक्सिजनयुक्त हावामा सजिलो सास फेर्दै अवतरण।' },
+      { day: 12, title: 'नाम्चे बजार देखि लुक्ला (२,८४० मि)', desc: 'शेर्पा गाइड र पोर्टरहरूसँग लुक्लामा उत्सव मनाउँदै अन्तिम पैदल यात्रा दिन।' },
+      { day: 13, title: 'लुक्ला देखि काठमाडौं उडान', desc: 'बिहान काठमाडौं फिर्ता उडान, आराम र बिदाइ नेपाली रात्रीभोजन।' },
+      { day: 14, title: 'काठमाडौंबाट अन्तिम प्रस्थान', desc: 'स्वागतको मीठो सम्झनासहित विमानस्थलमा स्थानान्तरण।' }
+    ],
     included: [
       'Kathmandu to Lukla roundtrip domestic flights with airport taxes',
       'All Sagarmatha National Park permits & Khumbu Pasang Lhamu rural entry fees',
@@ -60,25 +93,45 @@ export const TRIPS = [
       'Pulse oximeter for daily medical monitoring and comprehensive first-aid kit',
       'Swagat branded high-grade duffel bag, fleece jacket, and down sleeping bag rental'
     ],
+    included_np: [
+      'विमानस्थल कर सहित काठमाडौं-लुक्ला-काठमाडौं घरेलु उडान',
+      'सबै सगरमाथा राष्ट्रिय निकुञ्ज अनुमति र खुम्बु पासाङ ल्हामु गाउँपालिका प्रवेश शुल्क',
+      'प्रमाणित उच्च हिमाली अंग्रेजी बोल्ने शेर्पा गाइड र अनुभवी पोर्टर (२:१ अनुपात)',
+      'ट्रेकभरि जुम्ल्याहा बाँड्ने कोठा सहित टि-हाउस आवास',
+      'ट्रेकको समयमा मौसमी ताजा फलफूल सहित दैनिक ३ छाक (खाजा, खाना, बेलुकाको खाना)',
+      'दैनिक चिकित्सा निगरानीका लागि पल्स अक्सिमिटर र व्यापक प्राथमिक उपचार किट',
+      'स्वागत ब्रान्डेड उच्च-गुणस्तर डफल ब्याग, फ्लिस ज्याकेट, र डाउन स्लिपिङ ब्याग भाडा'
+    ],
     excluded: [
       'International flights and Nepal entry visa fees ($30 - $50)',
       'Travel and high-altitude rescue insurance (mandatory up to 6,000m)',
       'Personal expenses (hot showers, WiFi, battery charging at tea houses)',
       'Tips for guide and porters'
+    ],
+    excluded_np: [
+      'अन्तर्राष्ट्रिय उडान र नेपाल प्रवेश भिसा शुल्क ($३० - $५०)',
+      'यात्रा र उच्च हिमाली उद्धार बीमा (६,००० मिटरसम्म अनिवार्य)',
+      'व्यक्तिगत खर्च (तातो पानीको शावर, वाईफाई, टि-हाउसमा ब्याट्री चार्जिङ)',
+      'गाइड र पोर्टरहरूको लागि टिप्स'
     ]
   },
   {
     id: 'act-12',
     slug: 'annapurna-circuit-trek-12-days',
     title: 'Annapurna Circuit Trek 12-Days',
+    title_np: 'अन्नपूर्ण सर्किट ट्रेक (१२ दिन)',
     region: 'Annapurna Region',
+    region_np: 'अन्नपूर्ण क्षेत्र',
     regionSlug: 'annapurna-region',
     category: 'trek',
     duration: '12 Days',
+    duration_np: '१२ दिन',
     durationDays: 12,
     maxAltitude: '5,416 m / 17,769 ft',
+    maxAltitude_np: '५,४१६ मि / १७,७६९ फिट',
     maxAltitudeNum: 5416,
     difficulty: 'Moderate to Challenging',
+    difficulty_np: 'मध्यम देखि चुनौतीपूर्ण',
     difficultyLevel: 'challenging',
     rating: 4.95,
     reviewsCount: 98,
@@ -86,21 +139,33 @@ export const TRIPS = [
     salePrice: 950,
     featured: true,
     badge: 'Popular Choice',
+    badge_np: 'लोकप्रिय छनोट',
     image: 'https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?auto=format&fit=crop&w=1200&q=80',
     gallery: [
       'https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?auto=format&fit=crop&w=1200&q=80',
       'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80'
     ],
     overview: 'Cross the world’s highest navigable mountain pass, Thorong La (5,416m). Experience dramatic transition from subtropical green river valleys to Tibetan-influenced high desert landscapes.',
+    overview_np: 'विश्वको सबैभन्दा अग्लो पैदल यात्रा गर्न मिल्ने हिमाली भन्ज्याङ, थोरोङ ला (५,४१६ मि) पार गर्नुहोस्। उपोष्णकटिबंधीय हरियो नदी उपत्यकाहरूदेखि तिब्बती प्रभावित उच्च मरुभूमि परिदृश्यसम्मको नाटकीय परिवर्तनको अनुभव गर्नुहोस्।',
     bestSeason: 'Mar – May & Oct – Dec',
+    bestSeason_np: 'मार्च – मे र अक्टोबर – डिसेम्बर',
     groupSize: '2 – 10 Trekkers',
+    groupSize_np: '२ – १० जना ट्रेकर्स',
     startEnd: 'Kathmandu to Pokhara',
+    startEnd_np: 'काठमाडौं देखि पोखरा',
     highlights: [
       'Crossing legendary Thorong La Pass at 5,416m (17,769 ft)',
       'Rich cultural encounters from Hindu Gurung villages to Tibetan Buddhist shrines',
       'Sacred pilgrimage site of Muktinath with 108 eternal water spouts',
       'Relaxation in the scenic lakeside paradise of Pokhara',
       'Dramatic view of Annapurna I, II, III, IV, Dhaulagiri, and Machapuchare'
+    ],
+    highlights_np: [
+      '५,४१६ मिटर (१७,७६९ फिट) मा रहेको प्रसिद्ध थोरोङ ला भन्ज्याङ पार गर्ने',
+      'हिन्दू गुरुङ गाउँहरूदेखि तिब्बती बौद्ध मन्दिरहरूसम्मको समृद्ध सांस्कृतिक भेटघाट',
+      '१०८ धारा भएको पवित्र तीर्थस्थल मुक्तिनाथ',
+      'पोखराको मनोरम ताल किनारको स्वर्गमा आराम',
+      'अन्नपूर्ण प्रथम, द्वितीय, तृतीय, चतुर्थ, धौलागिरि र माछापुच्छ्रेको नाटकीय दृश्य'
     ],
     itinerary: [
       { day: 1, title: 'Drive Kathmandu to Besisahar & Dharapani (1,900m)', desc: 'Scenic mountain highway drive followed by 4x4 rugged valley drive.' },
@@ -116,6 +181,20 @@ export const TRIPS = [
       { day: 11, title: 'Drive Pokhara to Kathmandu', desc: 'Scenic tourist coach or optional short flight back to Kathmandu.' },
       { day: 12, title: 'Departure from Kathmandu', desc: 'Airport farewell.' }
     ],
+    itinerary_np: [
+      { day: 1, title: 'काठमाडौं देखि बेसीशहर र धारापानी ड्राइभ (१,९०० मि)', desc: 'मनोरम हिमाली राजमार्ग ड्राइभ र त्यसपछि ४x४ मार्फत उबडखाबड उपत्यका ड्राइभ।' },
+      { day: 2, title: 'धारापानी देखि चामे ट्रेक (२,६७० मि)', desc: 'घना चीर र ओक जङ्गलहरू पार गर्दै अचानक अन्नपूर्ण द्वितीयको दृश्य।' },
+      { day: 3, title: 'चामे देखि पिसाङ ट्रेक (३,२०० मि)', desc: 'पाउङ्दा दान्डाको नाटकीय घुमाउरो चट्टानको फेदमा पैदल यात्रा।' },
+      { day: 4, title: 'घ्यारु हुँदै माथिल्लो पिसाङ देखि मनाङ ट्रेक (३,५४० मि)', desc: 'फराकिलो अन्नपूर्ण श्रृंखलालाई हेर्दै सेन्सेसनल पानोरमिक उच्च ट्रेल।' },
+      { day: 5, title: 'मनाङमा उचाइ अनुकूलन दिन (३,५४० मि)', desc: 'गंगापूर्ण हिमनदी ताल, प्राचीन मठहरू, र चिकित्सा ब्रिफिङको अन्वेषण।' },
+      { day: 6, title: 'मनाङ देखि याक खर्क ट्रेक (४,०५० मि)', desc: 'रूखको रेखा माथि बिस्तारै उचाइ बढाउँदै उच्च चरन भूमिमा जहाँ निलो भेडा चर्छन्।' },
+      { day: 7, title: 'याक खर्क देखि थोरोङ फेडी ट्रेक (४,४५० मि)', desc: 'स्मारक भन्ज्याङको आधारमा ठाडो आरोहण।' },
+      { day: 8, title: 'थोरोङ ला भन्ज्याङ (५,४१६ मि) पार गर्दै मुक्तिनाथ (३,७६० मि)', desc: 'बिहानै सबैभन्दा उच्च बिन्दु पार गर्दै विजयी भई पवित्र मुक्तिनाथमा अवतरण।' },
+      { day: 9, title: 'मुक्तिनाथ देखि जोमसोम र मार्फा ड्राइभ (२,६७० मि)', desc: 'स्याउको बगैंचा र थकाली राजधानी मार्फाको सेतो लेपन भएका गल्लीहरू हुँदै पैदल यात्रा।' },
+      { day: 10, title: 'जोमसोम देखि पोखरा ड्राइभ / उडान (८२० मि)', desc: 'पोखरा आगमन, फेवा तालको किनारमा फुर्सदिलो पैदल यात्रा।' },
+      { day: 11, title: 'पोखरा देखि काठमाडौं ड्राइभ', desc: 'मनोरम पर्यटक बस वा वैकल्पिक छोटो उडान मार्फत काठमाडौं फिर्ता।' },
+      { day: 12, title: 'काठमाडौंबाट प्रस्थान', desc: 'विमानस्थलमा बिदाइ।' }
+    ],
     included: [
       'ACAP (Annapurna Conservation Area Permit) & TIMS card',
       'All land transportation by private jeep & tourist coach',
@@ -123,24 +202,41 @@ export const TRIPS = [
       '11 nights lodge & hotel accommodation',
       'Full board meals on trek'
     ],
+    included_np: [
+      'ACAP (अन्नपूर्ण संरक्षण क्षेत्र परियोजना) अनुमति र TIMS कार्ड',
+      'निजी जीप र पर्यटक बस द्वारा सबै स्थलमार्ग यातायात',
+      'इजाजतपत्र प्राप्त विशेषज्ञ ट्रेकिङ गाइड र पोर्टर सहयोग',
+      '११ रात लज र होटल आवास',
+      'ट्रेकमा पूर्ण खानपान'
+    ],
     excluded: [
       'Personal emergency rescue insurance',
       'Pokhara to Kathmandu flight upgrade ($120 option)',
       'Beverages and personal gear'
+    ],
+    excluded_np: [
+      'व्यक्तिगत आपतकालीन उद्धार बीमा',
+      'पोखरा देखि काठमाडौं उडान अपग्रेड ($१२० विकल्प)',
+      'पेय पदार्थ र व्यक्तिगत गियर'
     ]
   },
   {
     id: 'mct-14',
     slug: 'manaslu-circuit-trek-14-days',
     title: 'Manaslu Circuit Trek 14-Days',
+    title_np: 'मनास्लु सर्किट ट्रेक (१४ दिन)',
     region: 'Manaslu Region',
+    region_np: 'मनास्लु क्षेत्र',
     regionSlug: 'manaslu-region',
     category: 'trek',
     duration: '14 Days',
+    duration_np: '१४ दिन',
     durationDays: 14,
     maxAltitude: '5,106 m / 16,752 ft',
+    maxAltitude_np: '५,१०६ मि / १६,७५२ फिट',
     maxAltitudeNum: 5106,
     difficulty: 'Challenging',
+    difficulty_np: 'चुनौतीपूर्ण',
     difficultyLevel: 'challenging',
     rating: 4.97,
     reviewsCount: 76,
@@ -148,20 +244,27 @@ export const TRIPS = [
     salePrice: 1150,
     featured: true,
     badge: 'Restricted Remote Trail',
+    badge_np: 'प्रतिबन्धित दुर्गम ट्रेल',
     image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80'
-    ],
     overview: 'The premier off-the-beaten-path alternative to Annapurna. Circle Mt. Manaslu (8,163m), the world’s 8th highest mountain, crossing Larkya La Pass (5,106m) in pristine Tibetan frontier wilderness.',
+    overview_np: 'अन्नपूर्णको लागि प्रमुख कम भीडभाड भएको विकल्प। विश्वको आठौं अग्लो हिमाल मनास्लु (८,१६३ मि) को वरिपरि घुम्दै लार्क्या ला भन्ज्याङ (५,१०६ मि) पार गर्दै तिब्बती सीमान्त जङ्गलमा यात्रा।',
     bestSeason: 'Mar – May & Sep – Nov',
+    bestSeason_np: 'मार्च – मे र सेप्टेम्बर – नोभेम्बर',
     groupSize: 'Min 2 Trekkers (Special Permit Required)',
+    groupSize_np: 'कम्तिमा २ जना ट्रेकर्स (विशेष अनुमति आवश्यक)',
     startEnd: 'Kathmandu to Kathmandu',
+    startEnd_np: 'काठमाडौं देखि काठमाडौं',
     highlights: [
       'Remote restricted wilderness with preserved Tibetan Buddhist culture',
       'Cross Larkya La Pass (5,106m) with panoramic views of Himlung and Cheo Himal',
       'Side excursions to Birendra Tal glacial lake and Manaslu Base Camp',
       'Dramatic Budhi Gandaki river gorge with cantilever bridges'
+    ],
+    highlights_np: [
+      'संरक्षित तिब्बती बौद्ध संस्कृतिको साथ दुर्गम प्रतिबन्धित जङ्गल',
+      'हिमलुङ र चेओ हिमालको मनोरम दृश्यका साथ लार्क्या ला भन्ज्याङ (५,१०६ मि) पार गर्ने',
+      'बिरेन्द्र ताल हिमनदी र मनास्लु आधार शिविरमा साइड भ्रमणहरू',
+      'क्यान्टिलिभर पुलहरू सहित नाटकीय बुढी गण्डकी नदीको खोंच'
     ],
     itinerary: [
       { day: 1, title: 'Drive Kathmandu to Soti Khola / Machha Khola (900m)', desc: 'Scenic mountain drive along the Trishuli and Budhi Gandaki rivers.' },
@@ -179,6 +282,22 @@ export const TRIPS = [
       { day: 13, title: 'Drive Besisahar to Kathmandu', desc: 'Return drive to Kathmandu hotel and celebration dinner.' },
       { day: 14, title: 'Departure Day', desc: 'Airport transfer.' }
     ],
+    itinerary_np: [
+      { day: 1, title: 'काठमाडौं देखि सोती खोला / माछा खोला ड्राइभ (९०० मि)', desc: 'त्रिशूली र बुढी गण्डकी नदीको किनारै-किनार मनोरम हिमाली ड्राइभ।' },
+      { day: 2, title: 'माछा खोला देखि जगत ट्रेक (१,३४० मि)', desc: 'तातोपानी तातो झरना हुँदै प्रतिबन्धित संरक्षण क्षेत्रमा प्रवेश।' },
+      { day: 3, title: 'जगत देखि डेङ ट्रेक (१,८०० मि)', desc: 'बाँस र चीरको जङ्गल र खस्ने झरनाहरू हुँदै आरोहण।' },
+      { day: 4, title: 'डेङ देखि नाम्रुङ ट्रेक (२,६६० मि)', desc: 'मणि वाल र प्रार्थना चक्काहरूसँगै तिब्बती सांस्कृतिक प्रभाव देखा पर्छ।' },
+      { day: 5, title: 'नाम्रुङ देखि ल्हो ट्रेक (३,१८० मि)', desc: 'मनास्लु हिमाल र रिबुङ मठको पहिलो राजसी नजिकको दृश्य।' },
+      { day: 6, title: 'ल्हो देखि सामागाउँ ट्रेक (३,५३० मि)', desc: 'पुङ्येन गुम्बा र बिरेन्द्र ताल हिमनदीको भ्रमण।' },
+      { day: 7, title: 'सामागाउँमा उचाइ अनुकूलन दिन (३,५३० मि)', desc: 'मनास्लु आधार शिविर (४,४०० मि) तर्फ हाइकिङ वा तिब्बती ढुङ्गाको गाउँमा आराम।' },
+      { day: 8, title: 'सामागाउँ देखि साम्दो ट्रेक (३,८६० मि)', desc: 'प्राचीन तिब्बती व्यापार सीमा नजिकै अल्पाइन घाँसे मैदानमा पैदल यात्रा।' },
+      { day: 9, title: 'साम्दो देखि धर्मशाला / लार्क्या फेडी ट्रेक (४,४६० मि)', desc: 'उच्च भन्ज्याङको लागि तयारी आधार शिविर।' },
+      { day: 10, title: 'लार्क्या ला भन्ज्याङ (५,१०६ मि) पार गर्दै बिम्थाङ (३,७२० मि)', desc: 'अन्नपूर्ण द्वितीयको लोभलाग्दो दृश्यसहित लार्क्या ला माथि बिहानै विजय।' },
+      { day: 11, title: 'बिम्थाङ देखि तिलिजे ट्रेक (२,३०० मि)', desc: 'परीहरूको कथामा जस्तै लालीगुराँसको जङ्गल हुँदै अवतरण।' },
+      { day: 12, title: 'तिलिजे देखि धारापानी ट्रेक र बेसीशहर ड्राइभ', desc: 'अन्नपूर्ण ट्रेलमा सामेल हुँदै निजी जीपमा ड्राइभ।' },
+      { day: 13, title: 'बेसीशहर देखि काठमाडौं ड्राइभ', desc: 'काठमाडौं होटल फिर्ता ड्राइभ र उत्सव रात्रीभोजन।' },
+      { day: 14, title: 'प्रस्थान दिन', desc: 'विमानस्थल स्थानान्तरण।' }
+    ],
     included: [
       'Manaslu Restricted Area Permit (MRAP) & MCAP / ACAP permits',
       'Government authorized licensed mountain guide',
@@ -186,20 +305,33 @@ export const TRIPS = [
       'All meals and tea house stays',
       'Private 4WD transportation'
     ],
-    excluded: ['Personal visa', 'Travel medical & evacuation insurance', 'Personal gear']
+    included_np: [
+      'मनास्लु प्रतिबन्धित क्षेत्र अनुमति (MRAP) र MCAP / ACAP अनुमतिहरू',
+      'सरकारबाट अधिकार प्राप्त इजाजतपत्र प्राप्त हिमाली गाइड',
+      'पोर्टर सेवा (२ जना पाहुनाको लागि १ पोर्टर)',
+      'सबै खाना र टि-हाउस बसाइ',
+      'निजी 4WD यातायात'
+    ],
+    excluded: ['Personal visa', 'Travel medical & evacuation insurance', 'Personal gear'],
+    excluded_np: ['व्यक्तिगत भिसा', 'यात्रा चिकित्सा र उद्धार बीमा', 'व्यक्तिगत गियर']
   },
   {
     id: 'mardi-10',
     slug: 'mardi-himal-trek-10-days',
     title: 'Mardi Himal Trek 10-Days',
+    title_np: 'मार्दी हिमाल ट्रेक (१० दिन)',
     region: 'Annapurna Region',
+    region_np: 'अन्नपूर्ण क्षेत्र',
     regionSlug: 'annapurna-region',
     category: 'trek',
     duration: '10 Days',
+    duration_np: '१० दिन',
     durationDays: 10,
     maxAltitude: '4,500 m / 14,763 ft',
+    maxAltitude_np: '४,५०० मि / १४,७६३ फिट',
     maxAltitudeNum: 4500,
     difficulty: 'Easy to Moderate',
+    difficulty_np: 'सजिलो देखि मध्यम',
     difficultyLevel: 'moderate',
     rating: 4.92,
     reviewsCount: 112,
@@ -207,19 +339,27 @@ export const TRIPS = [
     salePrice: 680,
     featured: true,
     badge: 'Hidden Gem',
+    badge_np: 'लुकेको रत्न',
     image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80'
-    ],
     overview: 'A scenic ridge trek offering an unbeatable front-row perspective of Machapuchare (Fishtail Mountain) and the Annapurna range without excessive crowds.',
+    overview_np: 'अत्यधिक भीडभाड बिना माछापुच्छ्रे (फिस्टेल हिमाल) र अन्नपूर्ण श्रृंखलाको अद्वितीय अगाडिको दृश्य प्रदान गर्ने एक मनोरम रिज ट्रेक।',
     bestSeason: 'Sep – Dec & Feb – May',
+    bestSeason_np: 'सेप्टेम्बर – डिसेम्बर र फेब्रुअरी – मे',
     groupSize: '1 – 12 Trekkers',
+    groupSize_np: '१ – १२ जना ट्रेकर्स',
     startEnd: 'Kathmandu to Pokhara',
+    startEnd_np: 'काठमाडौं देखि पोखरा',
     highlights: [
       'Trek along narrow pristine ridges high above the valleys',
       'Stunning face-to-face vistas of Mount Fishtail (6,993m)',
       'Sunrise from Mardi Himal Viewpoint & Base Camp (4,500m)',
       'Ideal for trekkers seeking shorter duration with immense Himalayan views'
+    ],
+    highlights_np: [
+      'उपत्यकाहरू भन्दा माथि साँघुरो प्राचीन ढोकाहरूमा पैदल यात्रा',
+      'माछापुच्छ्रे हिमाल (६,९९३ मि) को लोभलाग्दो आमने-सामनेको दृश्य',
+      'मार्दी हिमाल भ्युप्वाइन्ट र आधार शिविर (४,५०० मि) बाट सूर्योदय',
+      'विशाल हिमाली दृश्यहरू सहित छोटो अवधिको खोजी गर्ने ट्रेकर्सहरूको लागि आदर्श'
     ],
     itinerary: [
       { day: 1, title: 'Kathmandu to Pokhara drive or flight', desc: 'Arrive in Pokhara and check into lakeside hotel.' },
@@ -233,21 +373,40 @@ export const TRIPS = [
       { day: 9, title: 'Return to Kathmandu', desc: 'Drive or short flight back.' },
       { day: 10, title: 'Departure', desc: 'Farewell.' }
     ],
+    itinerary_np: [
+      { day: 1, title: 'काठमाडौं देखि पोखरा ड्राइभ वा उडान', desc: 'पोखरा आगमन र ताल किनारको होटलमा चेक-इन।' },
+      { day: 2, title: 'कान्डे ड्राइभ र फरेस्ट क्याम्प ट्रेक (२,५०० मि)', desc: 'अस्ट्रेलियन क्याम्प र ओक जङ्गल हुँदै हल्का आरोहण।' },
+      { day: 3, title: 'फरेस्ट क्याम्प देखि लो क्याम्प ट्रेक (२,९७० मि)', desc: 'जङ्गलको बाटो खुल्दै हिमाली दृश्यहरू देखिन्छ।' },
+      { day: 4, title: 'लो क्याम्प देखि हाई क्याम्प ट्रेक (३,५८० मि)', desc: 'रूखको रेखा तोड्दै मनोरम ढोकामा पुग्ने।' },
+      { day: 5, title: 'मार्दी हिमाल आधार शिविर (४,५०० मि) हाइक र बादल डाँडा ट्रेक', desc: 'माछापुच्छ्रेमाथि शानदार सूर्योदयको लागि बिहानै हाइक।' },
+      { day: 6, title: 'बादल डाँडा देखि साइडिङ गाउँ ट्रेक (१,७५० मि)', desc: 'परम्परागत गाउँको जीवनमा अवतरण।' },
+      { day: 7, title: 'साइडिङ देखि पोखरा ड्राइभ', desc: 'पोखरामा दिउँसोको फुर्सद।' },
+      { day: 8, title: 'पोखरा दर्शनीय स्थल भ्रमण', desc: 'शान्ति स्तूप, डेभिस फल्स, र तालमा डुङ्गा सवारी।' },
+      { day: 9, title: 'काठमाडौं फिर्ता', desc: 'ड्राइभ वा छोटो उडान फिर्ता।' },
+      { day: 10, title: 'प्रस्थान', desc: 'बिदाइ।' }
+    ],
     included: ['All Annapurna permits', 'Guide and porter', 'Accommodation and meals', 'All land transfers'],
-    excluded: ['Personal insurance', 'Tips and personal drinks']
+    included_np: ['सबै अन्नपूर्ण अनुमतिहरू', 'गाइड र पोर्टर', 'आवास र खाना', 'सबै स्थलमार्ग स्थानान्तरण'],
+    excluded: ['Personal insurance', 'Tips and personal drinks'],
+    excluded_np: ['व्यक्तिगत बीमा', 'टिप्स र व्यक्तिगत पेय पदार्थ']
   },
   {
     id: 'langtang-10',
     slug: 'langtang-valley-trek-10-days',
     title: 'Langtang Valley Trek 10-Days',
+    title_np: 'लाङटाङ उपत्यका ट्रेक (१० दिन)',
     region: 'Langtang Region',
+    region_np: 'लाङटाङ क्षेत्र',
     regionSlug: 'langtang-region',
     category: 'trek',
     duration: '10 Days',
+    duration_np: '१० दिन',
     durationDays: 10,
     maxAltitude: '4,984 m / 16,351 ft',
+    maxAltitude_np: '४,९८४ मि / १६,३५१ फिट',
     maxAltitudeNum: 4984,
     difficulty: 'Moderate',
+    difficulty_np: 'मध्यम',
     difficultyLevel: 'moderate',
     rating: 4.90,
     reviewsCount: 84,
@@ -255,19 +414,27 @@ export const TRIPS = [
     salePrice: 750,
     featured: true,
     badge: 'Valley of Glaciers',
+    badge_np: 'हिमनदीको उपत्यका',
     image: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80'
-    ],
     overview: 'Known as the "Valley of Glaciers," Langtang combines Tamang heritage, yak cheese factories, high glacial cirques, and a climb of Kyanjin Ri (4,773m) or Tsergo Ri (4,984m).',
+    overview_np: '"हिमनदीको उपत्यका" भनेर चिनिने लाङटाङले तामाङ सम्पदा, याक चीज कारखाना, उच्च हिमनदी सर्कस, र क्याञ्जिन री (४,७७३ मि) वा छेर्गो री (४,९८४ मि) को आरोहणलाई जोड्दछ।',
     bestSeason: 'Mar – May & Sep – Dec',
+    bestSeason_np: 'मार्च – मे र सेप्टेम्बर – डिसेम्बर',
     groupSize: '1 – 14 Trekkers',
+    groupSize_np: '१ – १४ जना ट्रेकर्स',
     startEnd: 'Kathmandu to Kathmandu',
+    startEnd_np: 'काठमाडौं देखि काठमाडौं',
     highlights: [
       'Close proximity to Kathmandu with immediate mountain trails',
       'Rich Tamang Buddhist culture and hospitality in rebuilt villages',
       'Climb Kyanjin Ri (4,773m) or Tsergo Ri (4,984m) with 360° views of Langtang Lirung',
       'Taste fresh artisan Yak cheese in Kyanjin Gompa'
+    ],
+    highlights_np: [
+      'काठमाडौं नजिकै र तत्काल हिमाली ट्रेलहरू',
+      'पुनर्निर्मित गाउँहरूमा समृद्ध तामाङ बौद्ध संस्कृति र आतिथ्य',
+      'लाङटाङ लिरुङको ३६०° दृश्यका साथ क्याञ्जिन री (४,७७३ मि) वा छेर्गो री (४,९८४ मि) आरोहण',
+      'क्याञ्जिन गुम्बामा ताजा कारीगर याक चीजको स्वाद'
     ],
     itinerary: [
       { day: 1, title: 'Drive Kathmandu to Syabrubesi (1,460m)', desc: 'Scenic drive north into the Langtang National Park.' },
@@ -281,21 +448,40 @@ export const TRIPS = [
       { day: 9, title: 'Kathmandu Heritage Sightseeing', desc: 'Boudhanath Stupa and Pashupatinath temple tour.' },
       { day: 10, title: 'Departure', desc: 'Airport farewell.' }
     ],
+    itinerary_np: [
+      { day: 1, title: 'काठमाडौं देखि स्याब्रुबेसी ड्राइभ (१,४६० मि)', desc: 'लाङटाङ राष्ट्रिय निकुञ्ज भित्र उत्तरतर्फ मनोरम ड्राइभ।' },
+      { day: 2, title: 'स्याब्रुबेसी देखि लामा होटल ट्रेक (२,४७० मि)', desc: 'लाङटाङ खोलाको किनारै-किनार हरियो बाँसको जङ्गल हुँदै पैदल यात्रा।' },
+      { day: 3, title: 'लामा होटल देखि लाङटाङ गाउँ ट्रेक (३,४३० मि)', desc: 'ओक जङ्गल पार गर्दै फराकिलो हिमनदी उपत्यकाहरूमा प्रवेश।' },
+      { day: 4, title: 'लाङटाङ गाउँ देखि क्याञ्जिन गुम्बा ट्रेक (३,८७० मि)', desc: 'हिउँका चुचुराहरूले घेरिएको प्रसिद्ध गुम्बा गाउँमा आगमन।' },
+      { day: 5, title: 'उचाइ अनुकूलन र छेर्गो री (४,९८४ मि) आरोहण', desc: 'तिब्बतको दृश्यका साथ शानदार शिखर आरोहण।' },
+      { day: 6, title: 'क्याञ्जिन गुम्बा देखि लामा होटल ट्रेक (२,४७० मि)', desc: 'उपत्यकाको बाटो पछ्याउँदै फुर्सदिलो अवतरण।' },
+      { day: 7, title: 'लामा होटल देखि स्याब्रुबेसी ट्रेक', desc: 'सजिलो बाटोमा अन्तिम ट्रेक दिन।' },
+      { day: 8, title: 'स्याब्रुबेसी देखि काठमाडौं ड्राइभ', desc: 'फिर्ती ड्राइभ र होटल चेक-इन।' },
+      { day: 9, title: 'काठमाडौं सम्पदा दर्शनीय भ्रमण', desc: 'बौद्धनाथ स्तूप र पशुपतिनाथ मन्दिर भ्रमण।' },
+      { day: 10, title: 'प्रस्थान', desc: 'विमानस्थलमा बिदाइ।' }
+    ],
     included: ['Langtang National Park Permit & TIMS', 'Guide and porter', 'Meals and tea houses', 'Private jeep transfers'],
-    excluded: ['Personal travel insurance', 'Drinks and tips']
+    included_np: ['लाङटाङ राष्ट्रिय निकुञ्ज अनुमति र TIMS', 'गाइड र पोर्टर', 'खाना र टि-हाउस', 'निजी जीप स्थानान्तरण'],
+    excluded: ['Personal travel insurance', 'Drinks and tips'],
+    excluded_np: ['व्यक्तिगत यात्रा बीमा', 'पेय पदार्थ र टिप्स']
   },
   {
     id: 'ebc-gokyo-19',
     slug: 'everest-base-camp-gokyo-trek-19-days',
     title: 'Everest Base Camp Gokyo Trek 19-Days',
+    title_np: 'सगरमाथा आधार शिविर गोक्यो ट्रेक (१९ दिन)',
     region: 'Everest Region',
+    region_np: 'सोलुखुम्बु (एभरेष्ट) क्षेत्र',
     regionSlug: 'everest-region',
     category: 'trek',
     duration: '19 Days',
+    duration_np: '१९ दिन',
     durationDays: 19,
     maxAltitude: '5,364 m / 17,598 ft',
+    maxAltitude_np: '५,३६४ मि / १७,५९८ फिट',
     maxAltitudeNum: 5364,
     difficulty: 'Strenuous',
+    difficulty_np: 'अत्यन्त कठिन',
     difficultyLevel: 'strenuous',
     rating: 4.99,
     reviewsCount: 65,
@@ -303,19 +489,27 @@ export const TRIPS = [
     salePrice: 1620,
     featured: true,
     badge: 'Ultimate Everest Adventure',
+    badge_np: 'अन्तिम एभरेष्ट साहसिक',
     image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1200&q=80'
-    ],
     overview: 'The complete Khumbu odyssey combining turquoise glacial Gokyo Lakes, Cho La Pass (5,420m), Everest Base Camp, and Kala Patthar summit in one extraordinary expedition.',
+    overview_np: 'एक असाधारण अभियानमा फिरोजी हिमनदी गोक्यो तालहरू, चो ला भन्ज्याङ (५,४२० मि), सगरमाथा आधार शिविर, र कालापत्थर शिखरलाई संयोजन गर्ने पूर्ण खुम्बु ओडिसी।',
     bestSeason: 'Mar – May & Oct – Nov',
+    bestSeason_np: 'मार्च – मे र अक्टोबर – नोभेम्बर',
     groupSize: '2 – 10 Trekkers',
+    groupSize_np: '२ – १० जना ट्रेकर्स',
     startEnd: 'Kathmandu to Kathmandu',
+    startEnd_np: 'काठमाडौं देखि काठमाडौं',
     highlights: [
       'Emerald-blue sacred Gokyo Lakes mirroring Himalayan peaks',
       'Panoramic Gokyo Ri sunrise (5,357m) with 4 eight-thousanders in sight',
       'Exciting glaciated traverse over Cho La Pass (5,420m)',
       'Everest Base Camp & Kala Patthar'
+    ],
+    highlights_np: [
+      'हिमाली चुचुराहरूको प्रतिबिम्ब देखिने पन्ना-निलो पवित्र गोक्यो तालहरू',
+      '४ वटा आठ-हजारे हिमालहरू देखिने मनोरम गोक्यो री सूर्योदय (५,३५७ मि)',
+      'चो ला भन्ज्याङ (५,४२० मि) माथि रोमाञ्चक हिमनदी यात्रा',
+      'सगरमाथा आधार शिविर र कालापत्थर'
     ],
     itinerary: [
       { day: 1, title: 'Arrival in Kathmandu', desc: 'Airport transfer & Swagat team briefing.' },
@@ -338,21 +532,49 @@ export const TRIPS = [
       { day: 18, title: 'Celebration dinner', desc: 'Cultural performance.' },
       { day: 19, title: 'Departure', desc: 'Farewell.' }
     ],
+    itinerary_np: [
+      { day: 1, title: 'काठमाडौं आगमन', desc: 'विमानस्थल स्थानान्तरण र स्वागत टोलीको ब्रिफिङ।' },
+      { day: 2, title: 'लुक्ला उडान र फाक्दिङ ट्रेक', desc: 'खुम्बु ट्रेकको सुरुवात।' },
+      { day: 3, title: 'फाक्दिङ देखि नाम्चे बजार', desc: 'शेर्पा राजधानीमा आरोहण।' },
+      { day: 4, title: 'नाम्चेमा उचाइ अनुकूलन दिन', desc: 'स्याङबोचे र खुम्जुङ हाइक।' },
+      { day: 5, title: 'नाम्चे देखि डोले (४,११० मि)', desc: 'शान्त गोक्यो उपत्यकातर्फ लाग्नुहोस्।' },
+      { day: 6, title: 'डोले देखि माछेर्मो (४,४७० मि)', desc: 'मनोरम उपत्यका पैदल यात्रा।' },
+      { day: 7, title: 'माछेर्मो देखि गोक्यो ताल (४,७९० मि)', desc: 'प्राचीन हिमनदी तालहरूमा पुग्नुहोस्।' },
+      { day: 8, title: 'सूर्योदय गोक्यो री (५,३५७ मि) र आराम', desc: 'चो ओयु, सगरमाथा, ल्होत्से, मकालुको मनोरम दृश्य।' },
+      { day: 9, title: 'गोक्यो देखि थागनाक (४,७०० मि)', desc: 'ङ्गोजुम्पा हिमनदी पार गर्नुहोस्।' },
+      { day: 10, title: 'चो ला भन्ज्याङ (५,४२० मि) पार गर्दै जोङ्ला (४,८३० मि)', desc: 'उच्च अल्पाइन भन्ज्याङ यात्रा।' },
+      { day: 11, title: 'जोङ्ला देखि लोबुचे (४,९१० मि)', desc: 'क्लासिक EBC ट्रेलमा सामेल हुनुहोस्।' },
+      { day: 12, title: 'लोबुचे देखि EBC (५,३६४ मि) र गोरकशेप', desc: 'सगरमाथा आधार शिविरमा उभिनुहोस्।' },
+      { day: 13, title: 'कालापत्थर (५,५४५ मि) सूर्योदय र फेरिचे तर्फ अवतरण', desc: 'आरोही शिखर दृश्यहरू।' },
+      { day: 14, title: 'फेरिचे देखि नाम्चे बजार', desc: 'द्रुत सजिलो अवतरण।' },
+      { day: 15, title: 'नाम्चे देखि लुक्ला', desc: 'टोलीसँग उत्सव।' },
+      { day: 16, title: 'लुक्ला देखि काठमाडौं उडान', desc: 'होटल स्थानान्तरण।' },
+      { day: 17, title: 'बफर / दर्शनीय दिन', desc: 'काठमाडौं अन्वेषण।' },
+      { day: 18, title: 'उत्सव रात्रीभोजन', desc: 'सांस्कृतिक प्रदर्शन।' },
+      { day: 19, title: 'प्रस्थान', desc: 'बिदाइ।' }
+    ],
     included: ['All domestic flights', 'National park permits', 'Guide & porters', 'All meals & tea houses'],
-    excluded: ['International travel', 'Rescue insurance', 'Personal gear']
+    included_np: ['सबै घरेलु उडानहरू', 'राष्ट्रिय निकुञ्ज अनुमतिहरू', 'गाइड र पोर्टरहरू', 'सबै खाना र टि-हाउसहरू'],
+    excluded: ['International travel', 'Rescue insurance', 'Personal gear'],
+    excluded_np: ['अन्तर्राष्ट्रिय यात्रा', 'उद्धार बीमा', 'व्यक्तिगत गियर']
   },
   {
     id: 'heli-langtang',
     slug: 'langtang-helicopter-tour',
     title: 'Langtang Valley Helicopter Tour (1 Day)',
+    title_np: 'लाङटाङ उपत्यका हेलिकप्टर टुर (१ दिन)',
     region: 'Langtang Region',
+    region_np: 'लाङटाङ क्षेत्र',
     regionSlug: 'langtang-region',
     category: 'heli',
     duration: '1 Day (3 Hours)',
+    duration_np: '१ दिन (३ घण्टा)',
     durationDays: 1,
     maxAltitude: '3,870 m / 12,696 ft',
+    maxAltitude_np: '३,८७० मि / १२,६९६ फिट',
     maxAltitudeNum: 3870,
     difficulty: 'Easy / Scenic',
+    difficulty_np: 'सजिलो / मनोरम',
     difficultyLevel: 'easy',
     rating: 5.0,
     reviewsCount: 47,
@@ -360,40 +582,60 @@ export const TRIPS = [
     salePrice: 950,
     featured: false,
     badge: 'Luxury Heli Experience',
+    badge_np: 'लक्जरी हेली अनुभव',
     image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80'
-    ],
     overview: 'Board a modern Airbus helicopter in Kathmandu and soar above lush forests to land directly in Kyanjin Gompa beneath towering Himalayan glaciers. Enjoy breakfast with 360-degree mountain views.',
+    overview_np: 'काठमाडौंमा आधुनिक एयरबस हेलिकप्टरमा चढ्नुहोस् र हरियो जङ्गलहरू माथि उड्दै सिधै अग्ला हिमाली हिमनदीहरू मुनि क्याञ्जिन गुम्बामा अवतरण गर्नुहोस्। ३६०-डिग्री हिमाली दृश्यहरूसँग बिहानको खाजाको आनन्द लिनुहोस्।',
     bestSeason: 'All Year Round (Best: Sep – May)',
+    bestSeason_np: 'वर्षभरि (उत्तम: सेप्टेम्बर – मे)',
     groupSize: '1 – 5 Passengers',
+    groupSize_np: '१ – ५ जना यात्रुहरू',
     startEnd: 'Kathmandu Airport Return',
+    startEnd_np: 'काठमाडौं विमानस्थल फिर्ता',
     highlights: [
       'Private or small-group helicopter charter from Tribhuvan Airport',
       'Aerial views of Ganesh Himal, Langtang Lirung, and Kathmandu Valley',
       '45-minute landing at Kyanjin Gompa (3,870m) for breakfast & photos',
       'Zero trekking required – luxury mountain experience'
     ],
+    highlights_np: [
+      'त्रिभुवन विमानस्थलबाट निजी वा सानो समूहको हेलिकप्टर चार्टर',
+      'गणेश हिमाल, लाङटाङ लिरुङ, र काठमाडौं उपत्यकाको हवाई दृश्य',
+      'बिहानको खाजा र फोटोका लागि क्याञ्जिन गुम्बा (३,८७० मि) मा ४५ मिनेट अवतरण',
+      'शून्य ट्रेकिङ आवश्यक – लक्जरी हिमाली अनुभव'
+    ],
     itinerary: [
       { day: 1, title: '6:30 AM Hotel Pickup & 7:30 AM Takeoff', desc: 'VIP airport escort, safety briefing, and scenic mountain flight over rhododendron valleys.' },
       { day: 1, title: '8:15 AM Landing in Kyanjin Gompa (3,870m)', desc: 'Step out onto alpine meadows surrounded by glaciers. Enjoy hot breakfast at tea house.' },
       { day: 1, title: '9:00 AM Return Flight to Kathmandu', desc: 'Scenic aerial return and drop-off back at your hotel by 10:00 AM.' }
     ],
+    itinerary_np: [
+      { day: 1, title: 'बिहान ६:३० बजे होटल पिकअप र ७:३० बजे उडान', desc: 'VIP विमानस्थल एस्कर्ट, सुरक्षा ब्रिफिङ, र लालीगुराँस उपत्यकाहरू माथि मनोरम हिमाली उडान।' },
+      { day: 1, title: 'बिहान ८:१५ बजे क्याञ्जिन गुम्बा (३,८७० मि) मा अवतरण', desc: 'हिमनदीले घेरिएको अल्पाइन घाँसे मैदानमा पाइला टेक्नुहोस्। टि-हाउसमा तातो खाजाको आनन्द लिनुहोस्।' },
+      { day: 1, title: 'बिहान ९:०० बजे काठमाडौं फिर्ता उडान', desc: 'मनोरम हवाई फिर्ती र बिहान १०:०० बजेसम्म तपाईंको होटलमा छोडिनेछ।' }
+    ],
     included: ['Helicopter flight charter & taxes', 'National park landing permit', 'Kathmandu private car transfers', 'Hot breakfast at Kyanjin Gompa'],
-    excluded: ['Personal tips and gratuities']
+    included_np: ['हेलिकप्टर उडान चार्टर र करहरू', 'राष्ट्रिय निकुञ्ज अवतरण अनुमति', 'काठमाडौं निजी कार स्थानान्तरण', 'क्याञ्जिन गुम्बामा तातो खाजा'],
+    excluded: ['Personal tips and gratuities'],
+    excluded_np: ['व्यक्तिगत टिप्स र बक्सिस']
   },
   {
     id: 'poon-hill-4',
     slug: 'ghorepani-poon-hill-trek-4-days',
     title: 'Ghorepani Poon Hill Trek 4-Days',
+    title_np: 'घोरेपानी पुन हिल ट्रेक (४ दिन)',
     region: 'Annapurna Region',
+    region_np: 'अन्नपूर्ण क्षेत्र',
     regionSlug: 'annapurna-region',
     category: 'short-trek',
     duration: '4 Days',
+    duration_np: '४ दिन',
     durationDays: 4,
     maxAltitude: '3,210 m / 10,531 ft',
+    maxAltitude_np: '३,२१० मि / १०,५३१ फिट',
     maxAltitudeNum: 3210,
     difficulty: 'Easy to Moderate',
+    difficulty_np: 'सजिलो देखि मध्यम',
     difficultyLevel: 'easy',
     rating: 4.94,
     reviewsCount: 156,
@@ -401,19 +643,27 @@ export const TRIPS = [
     salePrice: 395,
     featured: false,
     badge: 'Short & Sweet',
+    badge_np: 'छोटो र रमाइलो',
     image: 'https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?auto=format&fit=crop&w=1200&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?auto=format&fit=crop&w=1200&q=80'
-    ],
     overview: 'The most popular short trek in Nepal. Famous for its golden sunrise over Dhaulagiri and Annapurna ranges from Poon Hill, blooming rhododendron forests, and hospitable Gurung villages.',
+    overview_np: 'नेपालको सबैभन्दा लोकप्रिय छोटो ट्रेक। पुन हिलबाट धौलागिरि र अन्नपूर्ण श्रृंखलाहरूमाथि सुनौलो सूर्योदय, फुल्ने लालीगुराँसको जङ्गल, र आतिथ्यशील गुरुङ गाउँहरूको लागि प्रसिद्ध।',
     bestSeason: 'Year Round (Best: Mar – May & Oct – Dec)',
+    bestSeason_np: 'वर्षभरि (उत्तम: मार्च – मे र अक्टोबर – डिसेम्बर)',
     groupSize: '1 – 15 Trekkers',
+    groupSize_np: '१ – १५ जना ट्रेकर्स',
     startEnd: 'Pokhara to Pokhara',
+    startEnd_np: 'पोखरा देखि पोखरा',
     highlights: [
       'Spectacular sunrise panorama over Annapurna and Dhaulagiri massifs',
       'Trek through the world’s largest blooming rhododendron sanctuary',
       'Comfortable mountain lodges and friendly Gurung hospitality',
       'Family-friendly altitude with low risk of altitude sickness'
+    ],
+    highlights_np: [
+      'अन्नपूर्ण र धौलागिरि हिमश्रृंखलाहरूमाथि शानदार सूर्योदय मनोरम दृश्य',
+      'विश्वको सबैभन्दा ठूलो फुल्ने लालीगुराँस अभयारण्य हुँदै ट्रेक',
+      'आरामदायी हिमाली लजहरू र मैत्रीपूर्ण गुरुङ आतिथ्य',
+      'उचाइ रोगको कम जोखिमको साथ परिवार-मैत्री उचाइ'
     ],
     itinerary: [
       { day: 1, title: 'Drive Pokhara to Nayapul & Trek to Tikhedhunga (1,540m)', desc: 'Gentle walk along cascading rivers and farmland.' },
@@ -421,21 +671,34 @@ export const TRIPS = [
       { day: 3, title: 'Sunrise on Poon Hill (3,210m) & Trek to Ghandruk (1,940m)', desc: 'Pre-dawn climb for iconic sunrise, then traverse to charming Ghandruk.' },
       { day: 4, title: 'Trek to Nayapul & Drive to Pokhara', desc: 'Descent and transfer to Pokhara lakeside.' }
     ],
+    itinerary_np: [
+      { day: 1, title: 'पोखरा देखि नयाँपुल ड्राइभ र टिकेधुङ्गा ट्रेक (१,५४० मि)', desc: 'खस्ने नदीहरू र खेतबारीहरूको किनारमा हल्का पैदल यात्रा।' },
+      { day: 2, title: 'टिकेधुङ्गा देखि घोरेपानी ट्रेक (२,८६० मि)', desc: 'उल्लेरीको ढुङ्गाको सिँढी चढ्दै प्राचीन ओक र लालीगुराँसको जङ्गलमा प्रवेश।' },
+      { day: 3, title: 'पुन हिल (३,२१० मि) मा सूर्योदय र घान्द्रुक ट्रेक (१,९४० मि)', desc: 'प्रतिष्ठित सूर्योदयको लागि बिहान सबेरै आरोहण, त्यसपछि रमणीय घान्द्रुकतर्फ यात्रा।' },
+      { day: 4, title: 'नयाँपुल ट्रेक र पोखरा ड्राइभ', desc: 'अवतरण र पोखरा ताल किनारमा स्थानान्तरण।' }
+    ],
     included: ['ACAP permit & TIMS', 'Licensed guide & porter', 'Lodge stays & meals', 'Private transfers from Pokhara'],
-    excluded: ['Pokhara hotel stays', 'Drinks and tips']
+    included_np: ['ACAP अनुमति र TIMS', 'इजाजतपत्र प्राप्त गाइड र पोर्टर', 'लज बसाइ र खाना', 'पोखराबाट निजी स्थानान्तरण'],
+    excluded: ['Pokhara hotel stays', 'Drinks and tips'],
+    excluded_np: ['पोखरा होटल बसाइ', 'पेय पदार्थ र टिप्स']
   },
   {
     id: 'chitwan-3',
     slug: 'chitwan-national-park-safari-3-days',
     title: 'Chitwan Jungle Safari Tour 3-Days',
+    title_np: 'चितवन राष्ट्रिय निकुञ्ज सफारी टुर (३ दिन)',
     region: 'Terai Lowlands',
+    region_np: 'तराई तल्लो भूभाग',
     regionSlug: 'jungle-safari',
     category: 'tour',
     duration: '3 Days',
+    duration_np: '३ दिन',
     durationDays: 3,
     maxAltitude: '415 m / 1,360 ft',
+    maxAltitude_np: '४१५ मि / १,३६० फिट',
     maxAltitudeNum: 415,
     difficulty: 'Easy / Leisure',
+    difficulty_np: 'सजिलो / फुर्सद',
     difficultyLevel: 'easy',
     rating: 4.88,
     reviewsCount: 68,
@@ -443,35 +706,50 @@ export const TRIPS = [
     salePrice: 310,
     featured: false,
     badge: 'Wildlife Adventure',
+    badge_np: 'वन्यजन्तु साहसिक',
     image: 'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80',
-    gallery: [
-      'https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80'
-    ],
     overview: 'Encounter the rare One-Horned Rhinoceros, Royal Bengal Tiger, and gharial crocodiles in UNESCO-listed Chitwan National Park. Features canoe rides, jeep safaris, and Tharu cultural dances.',
+    overview_np: 'युनेस्को सूचीबद्ध चितवन राष्ट्रिय निकुञ्जमा दुर्लभ एक-सिङ्गे गैंडा, शाही बाघ, र घडियाल गोहीहरूको सामना गर्नुहोस्। डुङ्गा सवारी, जीप सफारी, र थारू सांस्कृतिक नृत्यहरू समावेश छन्।',
     bestSeason: 'Oct – Mar',
+    bestSeason_np: 'अक्टोबर – मार्च',
     groupSize: '1 – 10 Guests',
+    groupSize_np: '१ – १० जना पाहुना',
     startEnd: 'Kathmandu / Pokhara to Chitwan',
+    startEnd_np: 'काठमाडौं / पोखरा देखि चितवन',
     highlights: [
       'Deep jungle 4x4 Jeep Safari searching for Royal Bengal Tigers',
       'Traditional wooden dugout canoe cruise down the Rapti River',
       'Spot wild One-Horned Rhinoceroses and hundreds of exotic bird species',
       'Authentic Tharu ethnic stick dance performance'
     ],
+    highlights_np: [
+      'शाही बाघको खोजीमा गहिरो जङ्गल 4x4 जीप सफारी',
+      'राप्ती नदीमा परम्परागत काठको डुङ्गा सवारी',
+      'जङ्गली एक-सिङ्गे गैंडा र सयौं विदेशी चरा प्रजातिहरू देख्नुहोस्',
+      'प्रामाणिक थारू जातीय लाठी नृत्य प्रदर्शन'
+    ],
     itinerary: [
       { day: 1, title: 'Drive or fly to Chitwan & Sunset Riverside Walk', desc: 'Welcome drink, Tharu village visit, and riverside sunset view.' },
       { day: 2, title: 'Full Day Jungle Safari & Canoe Cruise', desc: 'Morning canoe ride, jungle walking tour, elephant breeding center, and afternoon jeep safari.' },
       { day: 3, title: 'Morning Bird Watching & Departure', desc: 'Spot rare kingfishers and transfer to Kathmandu or Pokhara.' }
     ],
+    itinerary_np: [
+      { day: 1, title: 'चितवन ड्राइभ वा उडान र सूर्यास्त नदी किनार पैदल यात्रा', desc: 'स्वागत पेय, थारू गाउँ भ्रमण, र नदी किनारको सूर्यास्त दृश्य।' },
+      { day: 2, title: 'पूरा दिन जङ्गल सफारी र डुङ्गा सवारी', desc: 'बिहानको डुङ्गा सवारी, जङ्गल पैदल भ्रमण, हात्ती प्रजनन केन्द्र, र दिउँसो जीप सफारी।' },
+      { day: 3, title: 'बिहान चरा अवलोकन र प्रस्थान', desc: 'दुर्लभ किङफिशरहरू देख्नुहोस् र काठमाडौं वा पोखरा स्थानान्तरण।' }
+    ],
     included: ['All jungle activities & park permits', 'Resort accommodation & all meals', 'Naturalist jungle guide', 'Roundtrip transportation'],
-    excluded: ['Personal bar bill and tips']
+    included_np: ['सबै जङ्गल गतिविधिहरू र निकुञ्ज अनुमतिहरू', 'रिसोर्ट आवास र सबै खाना', 'प्रकृतिवादी जङ्गल गाइड', 'राउन्डट्रिप यातायात'],
+    excluded: ['Personal bar bill and tips'],
+    excluded_np: ['व्यक्तिगत बार बिल र टिप्स']
   }
 ];
 
 export const CATEGORIES = [
-  { id: 'all', name: 'All Trips' },
-  { id: 'everest', name: 'Everest Region' },
-  { id: 'annapurna', name: 'Annapurna Region' },
-  { id: 'manaslu', name: 'Manaslu Region' },
-  { id: 'short', name: 'Short Treks' },
-  { id: 'heli', name: 'Heli Tours' }
+  { id: 'all', name: 'All Trips', name_np: 'सबै यात्राहरू' },
+  { id: 'everest', name: 'Everest Region', name_np: 'सोलुखुम्बु (एभरेष्ट) क्षेत्र' },
+  { id: 'annapurna', name: 'Annapurna Region', name_np: 'अन्नपूर्ण क्षेत्र' },
+  { id: 'manaslu', name: 'Manaslu Region', name_np: 'मनास्लु क्षेत्र' },
+  { id: 'short', name: 'Short Treks', name_np: 'छोटो ट्रेकहरू' },
+  { id: 'heli', name: 'Heli Tours', name_np: 'हेलि टुरहरू' }
 ];
